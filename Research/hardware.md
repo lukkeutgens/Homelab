@@ -8,6 +8,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 64GB   | 1TB     | 60W   | **€849**  | Spain      | New         |
 | Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 50W   | **€991**  | US         | New         |
 | Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | 45W   | **€1118** | Germany    | New         | 
+| System 76     | Meerkat (Meer10)         | Intel Ultra 7 255H        | 16      | 64GB   | 1TB     | ???   | **€1312** | US         | New         | 
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 70W   | **€720**  | Taiwan     | New         |
 
 ## Notes
@@ -61,7 +62,7 @@ Too expensive
 
 ### ASUS NUC 14 PRO Core Ultra 7 
 - [Product Link](https://www.coolblue.be/nl/product/951316/asus-nuc-14-pro-core-ultra-7-rnuc14rvhu700002i.html)
-- Country of origin: (unknown for now)
+- Country of origin: Taiwan
 - Price: **€720**
 - CPU: Intel Core Ultra 7 (6x P-Cores, 8x E-Cores, 22x Threads) (not more info about it) 
 - RAM: Not clear on their website
@@ -85,8 +86,8 @@ Too expensive
 
 ### System76 Meerkat
 - [Product Link](https://system76.com/desktops/meer10/configure)
-- Country of origin:
-- Price: **€1196**
+- Country of origin: US
+- Price: **€1312**
 - CPU: Intel Ultra 7 255H (6x P-Cores, 8x E-Cores, 2x LPE-cores, 16x Threads)
 - RAM: 32GB
 - Storage: 1TB NVMe SSD
