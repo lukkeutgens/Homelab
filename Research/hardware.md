@@ -6,7 +6,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | Minisforum    | UM790 Pro                | AMD Ryzen™ 9 7940HS       | 16      | 64GB   | 1TB NVMe SSD | 85W   | **€699** | China      | Refurbished |
 | Minisforum    | MS-01 Work Station       | Intel Core i9-12900H      | 20      | 32GB   | 1TB NVMe SSD | 95W   | **€629** | China      | Refurbished |
 | Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB NVMe SSD | 45W   | **1118** | Germany    | New         | 
-| Intel         | NUC13 Linux Mini-pc      | Intel i7-1360P            | 16      | 64GB   | 1TB NVMe SSD | 50W   | **€991** | US         | New         |
+| Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB NVMe SSD | 50W   | **€991** | US         | New         |
 | PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB NVMe SSD | 75W   | **€722** | UK         | New         |
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???          | 70W   | **€720** | Taiwan     | New         |
 ---
