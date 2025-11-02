@@ -1,7 +1,7 @@
 # Research Hardware
 Just a document to keep track off the hardware I want to use. Probably will be a mini-pc.
 
-## UM790 Pro Refurbished
+## Minisforum UM790 Pro Refurbished
 - Link: https://minisforumpc.eu/products/um760-pro-um790-pro-um890-pro-refurbished?variant=52273580999022
 - Price: **€699**
 - CPU: AMD Ryzen™ 9 7940HS (8 cores / 16 Threads)
