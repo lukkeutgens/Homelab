@@ -79,12 +79,10 @@ Too expensive
 - RAM: 32GB
 - Storage: 1TB NVMe SSD
 - Network: 2x 2.5G RJ45 + Wifi 6 + Bluethooth
+- Power Consumption: TDP 35-54W, Idle ~12W, Load ~60W
 
 ---
 
-
-
-- Power Consumption: TDP 35-54W, Idle ~12W, Load ~60W
 
 
 
