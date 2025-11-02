@@ -33,7 +33,7 @@ Higher idle draw, but offers serious performance and expandability.
 - [Product Link](https://minisforumpc.eu/products/minisforum-ms-01-work-station-refurbished?variant=52324057940334)
 - Country of origin: **China**
 - Price: **€629**
-- CPU: Intel Core i9-12900H (6x P-Core, 8x E-Core (20x Threads)
+- CPU: Intel Core i9-12900H (6x P-Cores, 8x E-Cores (20x Threads)
 - RAM: 32GB
 - Storage: 1TB NVMe SSD
 - Network: 2x 10G SFP + 2x RJ45 2.5G
@@ -49,7 +49,7 @@ Too expensive
 - [Product Link](https://www.tuxedocomputers.com/en/TUXEDO-Nano-Pro-Gen14-AMD.tuxedo)
 - Country of origin: **Germany**
 - Price: **1118**
-- CPU: AMD Ryzen AI 5 340 (6 Core, 12 Threads)
+- CPU: AMD Ryzen AI 5 340 (6 Cores, 12 Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
 - Power Consumption: (unknown for now) 
@@ -61,13 +61,32 @@ Too expensive
 - [Product Link 1](https://laptopmetlinux.nl/product/intel-nuc13-linux-mini-computer/)
 - Country of origin: **US**
 - Price: **€991**
-- CPU: Intel i7-1360P (4x P-Core, 8x E-Core, (16x Threads)
+- CPU: Intel i7-1360P (4x P-Cores, 8x E-Cores, (16x Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
 - Power Consumption: (unknown for now) 
 
 ---
 
+## PCS AZENA® NUC DDR (New)
+- [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
+- Country of origin: (unknown for now) 
+- Price: **€722**
+- CPU: AMD Ryzen 7 PRO8 8845HS (?? Cores, ?? Chreads)
+- RAM: 64GB
+- Storage: 1TB NVMe SSD
+- Power Consumption: (unknown for now) 
+
+---
+
+## ASUS NUC 14 PRO Core Ultra 7 
+- [Product Link](https://www.coolblue.be/nl/product/951316/asus-nuc-14-pro-core-ultra-7-rnuc14rvhu700002i.html)
+- Country of origin: (unknown for now)
+- Price: **720**
+- CPU: Intel Core Ultra 7 (6x P-Cores, 8x E-Cores, 22x Threads) (not more info about it) 
+- RAM: Not clear on their website
+- Storage: Not clear on their website
+- Power Consumption: (unknown for now)
 
 ## Notes
 - Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good.
