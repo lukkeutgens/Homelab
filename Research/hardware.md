@@ -1,14 +1,14 @@
 # Research Hardware
 This document tracks potential hardware options for my homelab setup. Since the system will run 24/7, total wattage draw (TWD) and energy efficiency are important considerations. I'm primarily exploring refurbished mini-PCs that offer a good balance between performance, expandability, and power consumption.
 
-| Brand         | Model                | CPU                  | Threads | Memory | Storage      | Power | Price    | Country    | State       |
-| :---          | :---                 | :---                 | :---    | :---   | :---         | :---  | :---     | :---       | :---        |
-| Minisforum    | UM790 Pro            | AMD Ryzen™ 9 7940HS  | 16      | 64GB   | 1TB NVMe SSD | 85W   | **€699** | China      | Refurbished |
-| Minisforum    | MS-01 Work Station   | Intel Core i9-12900H | 20      | 32GB   | 1TB NVMe SSD | 95W   | **€629** | China      | Refurbished |
-| Tuxedo        | Nano Pro - Gen14     | AMD Ryzen AI 5 340   | 12      | 64GB   | 1TB NVMe SSD |       | **1118** | Germany    | New         | 
-| Intel         | NUC13 Linux Mini-pc  | Intel i7-1360P       | 16      | 64GB   | 1TB NVMe SSD |       | **€991** | US         | New         |
-| PCS           | AZENA® NUC DDR5      | AMD Ryzen 7 PRO8 8845HS |         | 64GB | 1TB NVMe SSD |     | **€722**  |        | New |
-| ASUS         | NUC 14 PRO Core Ultra 7 | Intel Core Ultra 7    | 22    | ???    | ???    |     | **€720**    |     | New    |
+| Brand         | Model                    | CPU                       | Threads | Memory | Storage      | Power | Price    | Country    | State       |
+| :---          | :---                     | :---                      | :---:   | :---:  | :---         | :---:  | :---     | :---      | :---        |
+| Minisforum    | UM790 Pro                | AMD Ryzen™ 9 7940HS       | 16      | 64GB   | 1TB NVMe SSD | 85W   | **€699** | China      | Refurbished |
+| Minisforum    | MS-01 Work Station       | Intel Core i9-12900H      | 20      | 32GB   | 1TB NVMe SSD | 95W   | **€629** | China      | Refurbished |
+| Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB NVMe SSD | 45W   | **1118** | Germany    | New         | 
+| Intel         | NUC13 Linux Mini-pc      | Intel i7-1360P            | 16      | 64GB   | 1TB NVMe SSD | 50W   | **€991** | US         | New         |
+| PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB NVMe SSD | 75W   | **€722** |            | New         |
+| ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???          | 70W   | **€720** |            | New         |
 ---
 
 
@@ -75,7 +75,7 @@ Too expensive
 - [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
 - Country of origin: (unknown for now) 
 - Price: **€722**
-- CPU: AMD Ryzen 7 PRO8 8845HS (?? Cores, ?? Chreads)
+- CPU: AMD Ryzen 7 PRO8 8845HS (8x Cores, 16x Chreads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
 - Network: 1x 2.5G RJ45
