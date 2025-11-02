@@ -1,6 +1,13 @@
 # Research Hardware
 This document tracks potential hardware options for my homelab setup. Since the system will run 24/7, total wattage draw (TWD) and energy efficiency are important considerations. I'm primarily exploring refurbished mini-PCs that offer a good balance between performance, expandability, and power consumption.
 
+| Brand         | Model                | CPU                  | Threads | Memory | Storage      | Power | Price    | Country    | State       |
+| :---          | :---                 | :---                 | :---    | :---   | :---         | :---  | :---     | :---       | :---        |
+| Minisforum    | UM790 Pro            | AMD Ryzen™ 9 7940HS  | 16      | 64GB   | 1TB NVMe SSD | 85W   | **€699** | China      | Refurbished |
+| Minisforum    | MS-01 Work Station   | Intel Core i9-12900H | 20      | 32GB   | 1TB NVMe SSD | 95W   | **€629** | China      | Refurbished |
+| Tuxedo        | Nano Pro - Gen14     | AMD Ryzen AI 5 340   | 12      | 64GB   | 1TB NVMe SSD |       | **1118** | Germany    | New         | 
+| Intel         | NUC13 Linux Mini-pc  | Intel i7-1360P       | 16      | 64GB   | 1TB NVMe SSD |       | **€991** | US         | New         |
+| 
 ---
 
 
