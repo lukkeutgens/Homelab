@@ -11,7 +11,7 @@ The basic simple option
 - Network: 1x RJ45 2.5G Ethernet Port
 
 ## Minisforum MS-01 Work Station Refurbished
-A (little) more powerfull expandable option
+A slightly more powerful and expandable option
 - Link: https://minisforumpc.eu/products/minisforum-ms-01-work-station-refurbished?variant=52324057940334
 - Price: **€629**
 - CPU: Intel Core i9-12900H (14 cores / 20 threads -> 6 performance (2x threads, 8 efficiency (1x thread))
