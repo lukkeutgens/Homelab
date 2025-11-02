@@ -5,7 +5,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | Brand         | Model                    | CPU                       | Threads | Memory | Storage | Power | Price     | Country    | State       |
 | :---          | :---                     | :---                      | :---:   | :---:  | :---:   | :---:  | :---     | :---       | :---        |
 | PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 75W   | **€722**  | UK         | New         |
-| Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 64GB   | 1TB     | 60W   | **€849**  | Spain      | New         |
+| Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 32GB   | 1TB     | 60W   | **€849**  | Spain      | New         |
 | Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 50W   | **€991**  | US         | New         |
 | Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | 45W   | **€1118** | Germany    | New         | 
 | System 76     | Meerkat (Meer10)         | Intel Ultra 7 255H        | 22      | 64GB   | 1TB     | 65W   | **€1312** | US         | New         | 
