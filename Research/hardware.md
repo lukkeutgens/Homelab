@@ -51,6 +51,6 @@ Too expensive
 
 
 ## Notes
-- Minisforum is Chinese. Since I'm European, and Chine building up to attack Taiwan, let's nog give them more money where we can. But the specs are good.
+- MMinisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good.
 - 
 
