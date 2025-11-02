@@ -58,7 +58,7 @@ Too expensive
 
 ---
 
-## Intel NUC13 (New)
+## Intel NUC13 Linux mini-pc (New)
 
 - [Product Link 1](https://laptopmetlinux.nl/product/intel-nuc13-linux-mini-computer/)
 - Country of origin: **US**
@@ -67,7 +67,7 @@ Too expensive
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
 - Network: 
-- Power Consumption: (unknown for now) 
+- Power Consumption: TDP 28W, Idle ~10W, Load ~50W
 
 ---
 
@@ -79,7 +79,7 @@ Too expensive
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
 - Network: 
-- Power Consumption: (unknown for now) 
+- Power Consumption: TDP 35–54W, Idle ~10W, Load ~75W
 
 ---
 
@@ -91,7 +91,9 @@ Too expensive
 - RAM: Not clear on their website
 - Storage: Not clear on their website
 - Network: 
-- Power Consumption: (unknown for now)
+- Power Consumption: TDP 28-65W, Idle ~10W, Load ~70W
+
+
 
 ## Notes
 - Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good.
