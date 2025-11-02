@@ -66,7 +66,7 @@ Too expensive
 - CPU: Intel i7-1360P (4x P-Cores, 8x E-Cores, (16x Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
-- Network: 
+- Network: 1x 2.5G RJ45
 - Power Consumption: TDP 28W, Idle ~10W, Load ~50W
 
 ---
@@ -78,7 +78,7 @@ Too expensive
 - CPU: AMD Ryzen 7 PRO8 8845HS (?? Cores, ?? Chreads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
-- Network: 
+- Network: 1x 2.5G RJ45
 - Power Consumption: TDP 35–54W, Idle ~10W, Load ~75W
 
 ---
@@ -90,7 +90,7 @@ Too expensive
 - CPU: Intel Core Ultra 7 (6x P-Cores, 8x E-Cores, 22x Threads) (not more info about it) 
 - RAM: Not clear on their website
 - Storage: Not clear on their website
-- Network: 
+- Network: 1x 2.5G RJ45
 - Power Consumption: TDP 28-65W, Idle ~10W, Load ~70W
 
 
