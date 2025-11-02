@@ -21,6 +21,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 - The PCS Azena with AMD Ryzen 7 PRO 8845HS offers double the RAM compared to the Slimbook, and is €100 cheaper. However, build quality might be lower?
 - The Slimbook One AMD can be pre-installed with Proxmox, which could become the backbone of the setup — a small advantage.
 - Intel-based options easily exceed the €1000 mark, but offer more CPU threads, which translates to more vCPUs for virtual machines.
+- Some have more networking ports, but do I need that?
 
 
 ---
