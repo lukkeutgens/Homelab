@@ -53,7 +53,7 @@ Too expensive
 - CPU: AMD Ryzen AI 5 340 (6 Cores, 12 Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
-- Network: 
+- Network: 1x 1G RJ45 + 1x 2.5G RJ45
 - Power Consumption: TDP 28W, Idle ~8W, Load ~45W
 
 ---
