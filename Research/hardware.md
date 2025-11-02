@@ -28,7 +28,7 @@ Higher idle draw, but offers serious performance and expandability.
 - Price: **€629**
 - CPU: Intel Core i9-12900H (14 cores / 20 threads -> 6 performance (2x threads, 8 efficiency (1x thread))
 - RAM: 32GB
-- Storage: 1TB
+- Storage: 1TB NVMe SSD
 - Network: 2x 10G SFP + 2x RJ45 2.5G
 - Power Consumption:
     - Idle: ~25–29W
@@ -37,9 +37,20 @@ Higher idle draw, but offers serious performance and expandability.
 
 ---
 
-## Notes
-- The UM790 Pro is quieter and more power-efficient, ideal for low-noise environments and basic workloads.
-- The MS-01 offers dual 10G SFP+ and PCIe expandability, making it better suited for future scaling or network-intensive tasks.
-- Both units support NVMe SSDs, DDR5 RAM, and modern I/O, but the MS-01 has more aggressive performance tuning and higher idle power usage.
+## TUXEDO Nano Pro - Gen14
+Too expensive
+- [Product Link](https://www.tuxedocomputers.com/en/TUXEDO-Nano-Pro-Gen14-AMD.tuxedo)
+- Country of origin: **Germany**
+- Price: **1118**
+- CPU: AMD Ryzen AI 5 340 (6 Core, 12 Threads)
+- RAM: 64GB
+- Storage: 1TB NVMe SSD
+- Power Consumption: (unknown) 
 
+---
+
+
+## Notes
+- Minisforum is Chinese. Since I'm European, and Chine building up to attack Taiwan, let's nog give them more money where we can. But the specs are good.
+- 
 
