@@ -10,7 +10,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 ## List
 | Brand         | Model                    | CPU                       | Threads | Memory | Storage | Power | Price     | Country    | State       |
 | :---          | :---                     | :---                      | :---:   | :---:  | :---:   | :---:  | :---     | :---       | :---        |
-| PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 75W   | **€722**  | UK         | New         |
+| PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 75W   | **€732**  | UK         | New         |
 | Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 32GB   | 1TB     | 60W   | **€849**  | Spain      | New         |
 | Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 50W   | **€991**  | US         | New         |
 | Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | 45W   | **€1118** | Germany    | New         | 
@@ -57,7 +57,7 @@ Too expensive
 ### PCS AZENA® NUC DDR5 (New)
 - [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
 - Country of origin: UK
-- Price: **€722**
+- Price: **€732**
 - CPU: AMD Ryzen 7 PRO8 8845HS (8x Cores, 16x Chreads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
