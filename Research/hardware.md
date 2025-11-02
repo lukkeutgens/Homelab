@@ -9,10 +9,17 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB NVMe SSD | 50W   | **€991** | US         | New         |
 | PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB NVMe SSD | 75W   | **€722** | UK         | New         |
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???          | 70W   | **€720** | Taiwan     | New         |
+
+## Notes
+- Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good.
+- 
+
 ---
 
+## Model Information
+More info about each model
 
-## Minisforum UM790 Pro Refurbished
+### Minisforum UM790 Pro Refurbished
 The basic simple option: Very quiet and energy-efficient for 24/7 operation
 - [Product Link](https://minisforumpc.eu/products/um760-pro-um790-pro-um890-pro-refurbished?variant=52273580999022)
 - Country of origin: **China**
@@ -29,7 +36,7 @@ The basic simple option: Very quiet and energy-efficient for 24/7 operation
 
  ---
  
-## Minisforum MS-01 Work Station Refurbished
+### Minisforum MS-01 Work Station Refurbished
 Higher idle draw, but offers serious performance and expandability.
 - [Product Link](https://minisforumpc.eu/products/minisforum-ms-01-work-station-refurbished?variant=52324057940334)
 - Country of origin: **China**
@@ -45,7 +52,7 @@ Higher idle draw, but offers serious performance and expandability.
 
 ---
 
-## TUXEDO Nano Pro - Gen14 (New)
+### TUXEDO Nano Pro - Gen14 (New)
 Too expensive
 - [Product Link](https://www.tuxedocomputers.com/en/TUXEDO-Nano-Pro-Gen14-AMD.tuxedo)
 - Country of origin: **Germany**
@@ -58,7 +65,7 @@ Too expensive
 
 ---
 
-## Intel NUC13 Linux mini-pc (New)
+### Intel NUC13 Linux mini-pc (New)
 
 - [Product Link 1](https://laptopmetlinux.nl/product/intel-nuc13-linux-mini-computer/)
 - Country of origin: **US**
@@ -71,7 +78,7 @@ Too expensive
 
 ---
 
-## PCS AZENA® NUC DDR5 (New)
+### PCS AZENA® NUC DDR5 (New)
 - [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
 - Country of origin: (unknown for now) 
 - Price: **€722**
@@ -83,7 +90,7 @@ Too expensive
 
 ---
 
-## ASUS NUC 14 PRO Core Ultra 7 
+### ASUS NUC 14 PRO Core Ultra 7 
 - [Product Link](https://www.coolblue.be/nl/product/951316/asus-nuc-14-pro-core-ultra-7-rnuc14rvhu700002i.html)
 - Country of origin: (unknown for now)
 - Price: **€720**
@@ -95,7 +102,5 @@ Too expensive
 
 
 
-## Notes
-- Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good.
-- 
+
 
