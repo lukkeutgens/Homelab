@@ -1,5 +1,5 @@
 # Research Hardware
-This document tracks potential hardware options for my homelab setup. Since the system will run 24/7, total wattage draw (TWD) and energy efficiency are important considerations. I'm primarily exploring refurbished mini-PCs that offer a good balance between performance, expandability, and power consumption.
+This document tracks potential hardware options for my homelab setup. Since the system will run 24/7, total wattage draw (TWD) and energy efficiency are important considerations. I'm primarily exploring mini-PCs that offer a good balance between performance, expandability, and power consumption.
 
 ## List
 | Brand         | Model                    | CPU                       | Threads | Memory | Storage | Power | Price     | Country    | State       |
