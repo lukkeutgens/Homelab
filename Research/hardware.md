@@ -26,7 +26,7 @@ Higher idle draw, but offers serious performance and expandability.
 - [Product Link](https://minisforumpc.eu/products/minisforum-ms-01-work-station-refurbished?variant=52324057940334)
 - Country of origin: **China**
 - Price: **€629**
-- CPU: Intel Core i9-12900H (14 cores / 20 threads -> 6 performance (2x threads, 8 efficiency (1x thread))
+- CPU: Intel Core i9-12900H (6x P-Core, 8x E-Core (20x Threads)
 - RAM: 32GB
 - Storage: 1TB NVMe SSD
 - Network: 2x 10G SFP + 2x RJ45 2.5G
@@ -37,7 +37,7 @@ Higher idle draw, but offers serious performance and expandability.
 
 ---
 
-## TUXEDO Nano Pro - Gen14
+## TUXEDO Nano Pro - Gen14 (New)
 Too expensive
 - [Product Link](https://www.tuxedocomputers.com/en/TUXEDO-Nano-Pro-Gen14-AMD.tuxedo)
 - Country of origin: **Germany**
@@ -45,7 +45,19 @@ Too expensive
 - CPU: AMD Ryzen AI 5 340 (6 Core, 12 Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
-- Power Consumption: (unknown) 
+- Power Consumption: (unknown for now) 
+
+---
+
+## Intel NUC13 (New)
+
+- [Product Link 1](https://laptopmetlinux.nl/product/intel-nuc13-linux-mini-computer/)
+- Country of origin: **US**
+- Price: **€991**
+- CPU: Intel i7-1360P (4x P-Core, 8x E-Core, (16x Threads)
+- RAM: 64GB
+- Storage: 1TB NVMe SSD
+- Power Consumption: (unknown for now) 
 
 ---
 
