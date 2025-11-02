@@ -7,6 +7,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 ## Minisforum UM790 Pro Refurbished
 The basic simple option: Very quiet and energy-efficient for 24/7 operation
 - [Product Link](https://minisforumpc.eu/products/um760-pro-um790-pro-um890-pro-refurbished?variant=52273580999022)
+- Country of origin: **China**
 - Price: **€699**
 - CPU: AMD Ryzen™ 9 7940HS (8 cores / 16 Threads)
 - RAM: 64GB
@@ -23,6 +24,7 @@ The basic simple option: Very quiet and energy-efficient for 24/7 operation
 ## Minisforum MS-01 Work Station Refurbished
 Higher idle draw, but offers serious performance and expandability.
 - [Product Link](https://minisforumpc.eu/products/minisforum-ms-01-work-station-refurbished?variant=52324057940334)
+- Country of origin: **China**
 - Price: **€629**
 - CPU: Intel Core i9-12900H (14 cores / 20 threads -> 6 performance (2x threads, 8 efficiency (1x thread))
 - RAM: 32GB
