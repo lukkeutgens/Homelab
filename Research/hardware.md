@@ -1,5 +1,5 @@
 # Research Hardware
-Just a document to keep track off the hardware I want to use. Probably will be a mini-pc.
+Just a document to keep track off the hardware I want to use. Probably will be a mini-pc. Because they will be running 24/7, TWD is a thing.
 
 ## Minisforum UM790 Pro Refurbished
 The basic simple option
