@@ -12,8 +12,10 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 70W   | **€720**  | Taiwan     | New         |
 
 ## Notes
-- Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good.
-- 
+- Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good so for now there in the comparisation chart as reference.
+- They need to work as Proxmox server for virualization, so the more RAM and CPU Threads (in VM will be a vCPU) the better. At least 16x threads in total and 32GB of RAM, but I would prefer more.
+- Network at least 2.5Gbps. Our Belgium internet providers are not giving more then 1Gbps for homes at this point.
+- For storage 1TB will be the minimum.
 
 ---
 
