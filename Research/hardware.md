@@ -83,6 +83,19 @@ Too expensive
 
 ---
 
+### System76 Meerkat
+- [Product Link](https://system76.com/desktops/meer10/configure)
+- Country of origin:
+- Price: **€1196**
+- CPU: Intel Ultra 7 255H (6x P-Cores, 8x E-Cores, 2x LPE-cores, 16x Threads)
+- RAM: 32GB
+- Storage: 1TB NVMe SSD
+- Network: 2x 2.5G RJ45 + Wifi 7 + Bluethooth 5.4
+- Power Consumption:
+
+---
+
+
 
 
 
