@@ -13,7 +13,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 
 ## Notes
 - Not sending money to a country that wants to attack Taiwan, so following brands are a no-go: **Minisforum**, **Beelink**, **GMKtec**, **Geekom**, ...
-- They need to work as Proxmox server for virualization, so the more RAM and CPU Threads (in VM will be a vCPU) the better. At least 16x threads in total and 32GB of RAM, but I would prefer more.
+- They need to work as Proxmox server for virtualization, so the more RAM and CPU Threads (in VM will be a vCPU) the better. At least 16x threads in total and 32GB of RAM, but I would prefer more.
 - Network at least 2.5Gbps. Our Belgium internet providers are not giving more then 1Gbps for homes at this point.
 - For storage 1TB will be the minimum.
 
