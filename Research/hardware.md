@@ -1,5 +1,11 @@
 # Research Hardware
+> Not sending money to a country that wants to attack Taiwan, so following brands are a no-go: **Minisforum**, **Beelink**, **GMKtec**, **Geekom**, ...
+
 This document tracks potential hardware options for my homelab setup. Since the system will run 24/7, total wattage draw (TWD) and energy efficiency are important considerations. I'm primarily exploring mini-PCs that offer a good balance between performance, expandability, and power consumption.
+
+- They need to work as Proxmox server for virtualization, so the more RAM and CPU Threads (in VM will be a vCPU) the better. At least 16x threads in total and 32GB of RAM, but I would prefer more. 
+- Network at least 2.5Gbps. Our Belgium internet providers are not giving more then 1Gbps for homes at this point.
+- For storage 1TB will be the minimum.
 
 ## List
 | Brand         | Model                    | CPU                       | Threads | Memory | Storage | Power | Price     | Country    | State       |
@@ -12,15 +18,10 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 70W   | **€720**  | Taiwan     | New         |
 
 ## Notes
-- Not sending money to a country that wants to attack Taiwan, so following brands are a no-go: **Minisforum**, **Beelink**, **GMKtec**, **Geekom**, ...
-- They need to work as Proxmox server for virtualization, so the more RAM and CPU Threads (in VM will be a vCPU) the better. At least 16x threads in total and 32GB of RAM, but I would prefer more.
-- Network at least 2.5Gbps. Our Belgium internet providers are not giving more then 1Gbps for homes at this point.
-- For storage 1TB will be the minimum.
 
----
 
-## Model Information
-More info about each model
+## All Models Considured
+More info about each model that came by.
 
 ### TUXEDO Nano Pro - Gen14 (New)
 Too expensive
