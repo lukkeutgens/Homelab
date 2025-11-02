@@ -7,7 +7,8 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | Minisforum    | MS-01 Work Station   | Intel Core i9-12900H | 20      | 32GB   | 1TB NVMe SSD | 95W   | **€629** | China      | Refurbished |
 | Tuxedo        | Nano Pro - Gen14     | AMD Ryzen AI 5 340   | 12      | 64GB   | 1TB NVMe SSD |       | **1118** | Germany    | New         | 
 | Intel         | NUC13 Linux Mini-pc  | Intel i7-1360P       | 16      | 64GB   | 1TB NVMe SSD |       | **€991** | US         | New         |
-| 
+| PCS           | AZENA® NUC DDR5      | AMD Ryzen 7 PRO8 8845HS |         | 64GB | 1TB NVMe SSD |     | **€722**  |        | New |
+| ASUS         | NUC 14 PRO Core Ultra 7 | Intel Core Ultra 7    | 22    | ???    | ???    |     | **€720**    |     | New    |
 ---
 
 
@@ -82,7 +83,7 @@ Too expensive
 ## ASUS NUC 14 PRO Core Ultra 7 
 - [Product Link](https://www.coolblue.be/nl/product/951316/asus-nuc-14-pro-core-ultra-7-rnuc14rvhu700002i.html)
 - Country of origin: (unknown for now)
-- Price: **720**
+- Price: **€720**
 - CPU: Intel Core Ultra 7 (6x P-Cores, 8x E-Cores, 22x Threads) (not more info about it) 
 - RAM: Not clear on their website
 - Storage: Not clear on their website
