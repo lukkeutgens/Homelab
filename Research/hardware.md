@@ -53,7 +53,8 @@ Too expensive
 - CPU: AMD Ryzen AI 5 340 (6 Cores, 12 Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
-- Power Consumption: (unknown for now) 
+- Network: 
+- Power Consumption: TDP 28W, Idle ~8W, Load ~45W
 
 ---
 
@@ -65,6 +66,7 @@ Too expensive
 - CPU: Intel i7-1360P (4x P-Cores, 8x E-Cores, (16x Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
+- Network: 
 - Power Consumption: (unknown for now) 
 
 ---
@@ -76,6 +78,7 @@ Too expensive
 - CPU: AMD Ryzen 7 PRO8 8845HS (?? Cores, ?? Chreads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
+- Network: 
 - Power Consumption: (unknown for now) 
 
 ---
@@ -87,6 +90,7 @@ Too expensive
 - CPU: Intel Core Ultra 7 (6x P-Cores, 8x E-Cores, 22x Threads) (not more info about it) 
 - RAM: Not clear on their website
 - Storage: Not clear on their website
+- Network: 
 - Power Consumption: (unknown for now)
 
 ## Notes
