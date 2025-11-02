@@ -18,7 +18,10 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 70W   | **€720**  | Taiwan     | New         |
 
 ## Notes
-
+- The PCS Azena with AMD Ryzen 7 8845HS has double the RAM as the Slimbook and is €100 cheaper. But maybe lesser quality build?
+- Slimbook can come with Proxmox as OS. And Proxmox might become the backbone of the setup so that's a plus.
+- Intel offerings go easely above the €1000 mark but have more CPU threads which means more vCPU's for VM's.
+- 
 
 ## All Models Considured
 More info about each model that came by.
