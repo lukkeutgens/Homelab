@@ -4,15 +4,14 @@ This document tracks potential hardware options for my homelab setup. Since the 
 ## List
 | Brand         | Model                    | CPU                       | Threads | Memory | Storage | Power | Price     | Country    | State       |
 | :---          | :---                     | :---                      | :---:   | :---:  | :---:   | :---:  | :---     | :---       | :---        |
-| Minisforum    | UM790 Pro                | AMD Ryzen™ 9 7940HS       | 16      | 64GB   | 1TB     | 85W   | **€699**  | China      | Refurbished |
-| Minisforum    | MS-01 Work Station       | Intel Core i9-12900H      | 20      | 32GB   | 1TB     | 95W   | **€629**  | China      | Refurbished |
-| Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | 45W   | **€1118** | Germany    | New         | 
-| Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 50W   | **€991**  | US         | New         |
 | PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 75W   | **€722**  | UK         | New         |
+| Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 64GB   | 1TB     | 85W   | **€849**  | Spain      | New         |
+| Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 50W   | **€991**  | US         | New         |
+| Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | 45W   | **€1118** | Germany    | New         | 
 | ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 70W   | **€720**  | Taiwan     | New         |
 
 ## Notes
-- Minisforum is a Chinese company. As a European, and given China's increasing aggression toward Taiwan, I prefer not to support them financially. But the specs are good so for now there in the comparisation chart as reference.
+- Not sending money to a country that wants to attack Taiwan, so following brands are a no-go: **Minisforum**, **Beelink**, **GMKtec**, **Geekom**, ...
 - They need to work as Proxmox server for virualization, so the more RAM and CPU Threads (in VM will be a vCPU) the better. At least 16x threads in total and 32GB of RAM, but I would prefer more.
 - Network at least 2.5Gbps. Our Belgium internet providers are not giving more then 1Gbps for homes at this point.
 - For storage 1TB will be the minimum.
@@ -22,7 +21,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 ## Model Information
 More info about each model
 
-### Minisforum UM790 Pro Refurbished
+### ❌ Minisforum UM790 Pro Refurbished
 The basic simple option: Very quiet and energy-efficient for 24/7 operation
 - [Product Link](https://minisforumpc.eu/products/um760-pro-um790-pro-um890-pro-refurbished?variant=52273580999022)
 - Country of origin: **China**
@@ -39,7 +38,7 @@ The basic simple option: Very quiet and energy-efficient for 24/7 operation
 
  ---
  
-### Minisforum MS-01 Work Station Refurbished
+### ❌ Minisforum MS-01 Work Station Refurbished
 Higher idle draw, but offers serious performance and expandability.
 - [Product Link](https://minisforumpc.eu/products/minisforum-ms-01-work-station-refurbished?variant=52324057940334)
 - Country of origin: **China**
@@ -102,6 +101,16 @@ Too expensive
 - Storage: Not clear on their website
 - Network: 1x 2.5G RJ45
 - Power Consumption: TDP 28-65W, Idle ~10W, Load ~70W
+
+### Slimbook One AMD Ryzen 7 8845HS
+- [Product Link](https://slimbook.com/en/shop/product/one-amd-ryzen-7-8845hs-1417?category=14)
+- Country of origin: Spain
+- Price: **€849**
+- CPU AMD Ryzen 7 8845HS (8x Cores, 16x Threads)
+- RAM: 32GB
+- Storage: 1TB NVMe SSD
+- Network: 2x 2.5G RJ45 + Wifi 6 + Bluethooth
+- Power Consumption:
 
 
 
