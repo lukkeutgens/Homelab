@@ -57,7 +57,7 @@ Higher idle draw, but offers serious performance and expandability.
 Too expensive
 - [Product Link](https://www.tuxedocomputers.com/en/TUXEDO-Nano-Pro-Gen14-AMD.tuxedo)
 - Country of origin: **Germany**
-- Price: **1118**
+- Price: **€1118**
 - CPU: AMD Ryzen AI 5 340 (6 Cores, 12 Threads)
 - RAM: 64GB
 - Storage: 1TB NVMe SSD
