@@ -56,7 +56,7 @@ Too expensive
 
 ### PCS AZENA® NUC DDR5 (New)
 - [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
-- Country of origin: (unknown for now) 
+- Country of origin: UK
 - Price: **€722**
 - CPU: AMD Ryzen 7 PRO8 8845HS (8x Cores, 16x Chreads)
 - RAM: 64GB
