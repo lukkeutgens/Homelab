@@ -68,7 +68,7 @@ Too expensive
 
 ---
 
-## PCS AZENA® NUC DDR (New)
+## PCS AZENA® NUC DDR5 (New)
 - [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
 - Country of origin: (unknown for now) 
 - Price: **€722**
