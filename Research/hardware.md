@@ -103,18 +103,6 @@ Too expensive
 
 ---
 
-## Self Build
-Maybe building it myself will be cheaper and more powerfull?
-
-### CPU's
-| Brand    | Model                            | Cores | Threads | TDP      | iGPU  | Price | Link    |
-| :---     | :---                             | :---: | :---:   | :---     | :---: | :---  | :---    |
-| AMD      | Ryzen™ 9 7900X Desktop           | 12    | 24      | 170W     | Yes   | €279  | [Link](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7900x.html) |
-| AMD      | Ryzen™ 9 5950X Desktop           | 16    | 32      | 105W     | No    | €259  | [Link](https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-9-5950x.html) |
-| Intel    | Core™ i5 14600K Desktop          | 14    | 20      | 125-181W | Yes   | €200  | [Link](https://www.intel.com/content/www/us/en/products/sku/236799/intel-core-i5-processor-14600k-24m-cache-up-to-5-30-ghz/specifications.html) |
-| Intel    | Core™ i7-12700K Desktop          | 12    | 20      | 125-190W | Yes   | €269  | [Link](https://www.intel.com/content/www/us/en/products/sku/134594/intel-core-i712700k-processor-25m-cache-up-to-5-00-ghz/specifications.html) |
-
-### Rack
 
 
 
