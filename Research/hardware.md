@@ -26,7 +26,7 @@ This document tracks potential hardware options for my homelab setup. Since the 
 
 ---
 
-## All Models Considered
+## Mini PC's Considered
 This section documents all models that were evaluated during the selection process.
 
 ### TUXEDO Nano Pro - Gen14 (New)
@@ -103,7 +103,19 @@ Too expensive
 
 ---
 
+## Self Build
+Maybe building it myself will be cheaper and more powerfull?
 
+### CPU's
+| Brand    | Model                            | Cores | Threads  | TDP   | iGPU  | Price | Link    |
+| :---     | :---                             | :---: | :---:    | :---  | :---: | :---  | :---    |
+| AMD      | Ryzen™ 9 7900X Desktop Processor | 12    | 24       | 170W  | Yes   | €279  | [Link](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-9-7900x.html) |
+| AMD      | Ryzen™ 9 5950X Desktop Processor | 16    | 32       | 105W  | No    | €259  | [Link](https://www.amd.com/en/products/processors/desktops/ryzen/5000-series/amd-ryzen-9-5950x.html) |
+
+
+
+
+AMD Ryzen™ 9 7900X Desktop Processor: 12x Cores, 24x Threads, 
 
 
 
