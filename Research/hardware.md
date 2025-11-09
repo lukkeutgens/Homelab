@@ -31,7 +31,7 @@ I decided to go with the Slimbook One, even though it's slightly more expensive 
 This section documents all models that were evaluated during the selection process.
 
 ### TUXEDO Nano Pro - Gen14 (New)
-Too expensive
+Too expensive for my needs
 - [Product Link](https://www.tuxedocomputers.com/en/TUXEDO-Nano-Pro-Gen14-AMD.tuxedo)
 - Country of origin: **Germany**
 - Price: **€1118**
@@ -44,7 +44,7 @@ Too expensive
 ---
 
 ### Intel NUC13 Linux mini-pc (New)
-
+Too expensive for my needs
 - [Product Link 1](https://laptopmetlinux.nl/product/intel-nuc13-linux-mini-computer/)
 - Country of origin: **US**
 - Price: **€991**
@@ -57,6 +57,7 @@ Too expensive
 ---
 
 ### PCS AZENA® NUC DDR5 (New)
+A potential candidate.
 - [Product Link](https://www.pcspecialist.be/computers/pcs-azena-nuc/)
 - Country of origin: UK
 - Price: **€732**
@@ -69,6 +70,7 @@ Too expensive
 ---
 
 ### ASUS NUC 14 PRO Core Ultra 7 
+Barebone, likely more expensive than the AMD option once RAM and SSD are added. The SSD alone adds at least €128, and RAM still needs to be included. Also, the website isn't very clear about the configuration options.
 - [Product Link](https://www.coolblue.be/nl/product/951316/asus-nuc-14-pro-core-ultra-7-rnuc14rvhu700002i.html)
 - Country of origin: Taiwan
 - Price: **€720**
@@ -81,6 +83,7 @@ Too expensive
 ---
 
 ### Slimbook One AMD Ryzen 7 8845HS
+This is the one I ordered.
 - [Product Link](https://slimbook.com/en/shop/product/one-amd-ryzen-7-8845hs-1417?category=14)
 - Country of origin: Spain
 - Price: **€849**
@@ -93,6 +96,7 @@ Too expensive
 ---
 
 ### System76 Meerkat
+Too expensive for my needs
 - [Product Link](https://system76.com/desktops/meer10/configure)
 - Country of origin: US
 - Price: **€1312**
