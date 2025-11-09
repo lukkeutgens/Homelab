@@ -4,7 +4,7 @@ Some notes to look up how to build my homelab secure
 ## Needed Software Stack
 Research which software I need to run to keep everything safe...
 
-### Reverse Proxy
+### 🔁 Reverse Proxy
 - Centralizes access to internal services via a single entry point (usually port 443)
 - Handles SSL/TLS termination and certificate management
 - Obscures internal IPs and service layout (security through abstraction)
@@ -18,7 +18,7 @@ Popular packages:
 
 ---
 
-### Secrets Management
+### 🔐 Secrets Management
 - Prevents credentials, tokens, and API keys from leaking into plaintext or Git
 - Supports rotation, auditing, and encryption
 - Required for ISO 27001 domains like Cryptographic Controls and Access Management
@@ -31,7 +31,7 @@ Popular packages:
 
 ---
 
-### Authentication & Identity Management
+### 🪪 Authentication & Identity Management
 - Centralized user, role, and access control
 - Supports SSO, OAuth2, OpenID Connect
 - Required for ISO 27001 domains like Access Control and User Access Management
@@ -43,7 +43,7 @@ Popular packages:
 
 ---
 
-### VPN / Secure Access
+### 🛡️ VPN / Secure Access
 - Provides encrypted tunnels for secure remote access
 - Required for ISO 27001 domains like Communications Security and Remote Access
 
