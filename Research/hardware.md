@@ -12,10 +12,10 @@ This document tracks potential hardware options for my homelab setup. Since the 
 | :---          | :---                     | :---                      | :---:   | :---:  | :---:   | :---                | :---:  | :---     | :---       | :---        |
 | PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 1x RJ45-2.5G        | 75W   | **€732**  | UK         | New         |
 | Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 32GB   | 1TB     | 2x 2.5G RJ45        | 60W   | **€849**  | Spain      | New         |
+| ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | 1TB     | 1x RJ45-2.5G        | 70W   | **€848**  | Taiwan     | New         |
 | Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 1x RJ45-2.5G        | 50W   | **€991**  | US         | New         |
 | Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | RJ45-1G + RJ45-2.5G | 45W   | **€1118** | Germany    | New         | 
 | System 76     | Meerkat (Meer10)         | Intel Ultra 7 255H        | 22      | 64GB   | 1TB     | 2x 2.5G RJ45        | 65W   | **€1312** | US         | New         | 
-| ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 1x RJ45-2.5G        | 70W   | **€720**  | Taiwan     | New         |
 
 ## Why I chose the Slimbook One
 I decided to go with the Slimbook One, even though it's slightly more expensive than the PCS Azena, for the following reasons:
