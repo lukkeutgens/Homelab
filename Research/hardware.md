@@ -1,5 +1,5 @@
 # Research: Homelab Hardware
-> I refuse to send money to countries that threaten Taiwan or are actively engaged in military aggression. Therefore, the following brands are excluded: Minisforum, Beelink, GMKtec, Geekom, and others with Chinese or Russian origins.
+> ⚠️ I refuse to send money to countries that threaten Taiwan or are actively engaged in military aggression. Therefore, the following brands are excluded: Minisforum, Beelink, GMKtec, Geekom, and others with Chinese or Russian origins.
 
 This document tracks potential hardware options for my homelab setup. Since the system will run 24/7, total wattage draw (TWD) and energy efficiency are key considerations. I'm primarily exploring mini-PCs that strike a good balance between performance, expandability, and power consumption.
 
