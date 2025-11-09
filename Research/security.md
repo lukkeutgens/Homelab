@@ -7,26 +7,50 @@ Some notes to look up how to build my homelab secure
 - [Selfhosting SSO with NGINX / Keycloak](https://joeeey.com/blog/selfhosting-sso-with-nginx-keycloak-part-1/): Blog post about setup.
 - [Github Keycloak Production](https://github.com/anqorithm/keycloak-production/blob/main/README.md): Diagram drawing setup
 
-## Access Control
-- Keycloak:
-- Authentik:
+## Needed Software Stack
+### Reverse Proxy
+- Centralizes access to internal services via a single entry point (usually port 443)
+- Handles SSL/TLS termination and certificate management
+- Obscures internal IPs and service layout (security through abstraction)
+- Enables URL routing and subdomain management
 
-## Cryptography
-- HTTPS via Nginx Proxy Manager:
+Popular packages:
+- **NGINX**: Lightweight, robust, widely supported
+- **NGINX Proxy Manager**: GUI-based management, automatic Let's Encrypt
+- **Traefik**: Dynamic config, ideal for containerized workloads
+- **HAProxy**: High performance, suitable for load balancing
 
-## Operations Security
-- Setup automatic updates for security patches
+### Secrets Management
+- Prevents credentials, tokens, and API keys from leaking into plaintext or Git
+- Supports rotation, auditing, and encryption
+- Required for ISO 27001 domains like Cryptographic Controls and Access Management
 
-## Communications Security
-- VPN Solution like Wireguard?
+Popular packages:
+- **Vault (HashiCorp)**: Full-featured ecosystem, policies, audit logging
+- **Vaultwarden**: Lightweight, Bitwarden-compatible
+- **Step CA + Secrets**: Combines PKI with secrets via JSON/YAML
+- **SOPS + GPG/Age**: Encrypts config files for Git workflows
 
-## System Acquisition
-Document everything in Github (I'm doing that right now ;) )
+### Authentication & Identity Management
+- Centralized user, role, and access control
+- Supports SSO, OAuth2, OpenID Connect
+- Required for ISO 27001 domains like Access Control and User Access Management
 
-## Monitoring
-Find a good monitoring solition to monitor complete setup. 
-- Copilot
-- Grafana
-- ...
+Popular packages:
+- **Keycloak**: Enterprise-grade IAM, RBAC, LDAP integration
+- **Authentik**: Lightweight, modern UI, great for homelabs
+- **Authelia**: 2FA, reverse proxy integration, YAML-based config
 
-## Asset Management
+### VPN / Secure Access
+- Provides encrypted tunnels for secure remote access
+- Required for ISO 27001 domains like Communications Security and Remote Access
+
+Popular packages:
+- **WireGuard**: Fast, kernel-integrated, simple to configure
+- **OpenVPN**: Mature, widely supported
+- **Tailscale**: Zero-config mesh VPN based on WireGuard
+- **Cloudflare Tunnel**: External access without opening ports
+
+
+
+
