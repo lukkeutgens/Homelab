@@ -8,21 +8,22 @@ This document tracks potential hardware options for my homelab setup. Since the 
 - Storage must be at least 1TB NVMe SSD.
 
 ## List
-| Brand         | Model                    | CPU                       | Threads | Memory | Storage | Power | Price     | Country    | State       |
-| :---          | :---                     | :---                      | :---:   | :---:  | :---:   | :---:  | :---     | :---       | :---        |
-| PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 75W   | **€732**  | UK         | New         |
-| Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 32GB   | 1TB     | 60W   | **€849**  | Spain      | New         |
-| Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 50W   | **€991**  | US         | New         |
-| Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | 45W   | **€1118** | Germany    | New         | 
-| System 76     | Meerkat (Meer10)         | Intel Ultra 7 255H        | 22      | 64GB   | 1TB     | 65W   | **€1312** | US         | New         | 
-| ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 70W   | **€720**  | Taiwan     | New         |
+| Brand         | Model                    | CPU                       | Threads | Memory | Storage | Network             | Power | Price     | Country    | State       |
+| :---          | :---                     | :---                      | :---:   | :---:  | :---:   | :---                | :---:  | :---     | :---       | :---        |
+| PCSpecialist  | AZENA® NUC DDR5          | AMD Ryzen 7 PRO8 8845HS   | 16      | 64GB   | 1TB     | 1x RJ45-2.5G        | 75W   | **€732**  | UK         | New         |
+| Slimbook      | One AMD Ryzen 7 8845HS   | AMD Ryzen 7 8845HS        | 16      | 32GB   | 1TB     | 2x 2.5G RJ45        | 60W   | **€849**  | Spain      | New         |
+| Intel         | NUC 13 Linux Mini-pc     | Intel i7-1360P            | 16      | 64GB   | 1TB     | 1x RJ45-2.5G        | 50W   | **€991**  | US         | New         |
+| Tuxedo        | Nano Pro - Gen14         | AMD Ryzen AI 5 340        | 12      | 64GB   | 1TB     | RJ45-1G + RJ45-2.5G | 45W   | **€1118** | Germany    | New         | 
+| System 76     | Meerkat (Meer10)         | Intel Ultra 7 255H        | 22      | 64GB   | 1TB     | 2x 2.5G RJ45        | 65W   | **€1312** | US         | New         | 
+| ASUS          | NUC 14 PRO Core Ultra 7  | Intel Core Ultra 7        | 22      | ???    | ???     | 1x RJ45-2.5G        | 70W   | **€720**  | Taiwan     | New         |
 
-## Model Comparison Notes
-- The PCS Azena with AMD Ryzen 7 PRO 8845HS offers double the RAM compared to the Slimbook, and is €100 cheaper. However, build quality might be lower?
-- The Slimbook One AMD can be pre-installed with Proxmox, which could become the backbone of the setup — a small advantage.
-- Intel-based options easily exceed the €1000 mark, but offer more CPU threads, which translates to more vCPUs for virtual machines.
-- Some have more networking ports, but do I need that?
-
+## Why I chose the Slimbook One
+I decided to go with the Slimbook One, even though it's slightly more expensive than the PCS Azena, for the following reasons:
+- The extra 4 threads on Intel models don’t justify the significant price difference.
+- The build quality of the Slimbook appears superior compared to PCS.
+- It offers dual 2.5GbE RJ45 ports, plus WiFi 6 and Bluetooth, which adds flexibility.
+- The Slimbook can be pre-installed with Proxmox, providing extra assurance for compatibility and support.
+- It’s expandable with additional RAM and SSD if needed in the future.
 
 ---
 
