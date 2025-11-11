@@ -4,7 +4,7 @@
 ```mermaid
 flowchart TD
     A[Internet] -->|WAN: Public IP| B[ISP Gateway<br/>GE1-LAN: 192.168.192.5]
-    B -->|WAN/LAN1 10G: 192.168.192.5| ZW[Asus ZenWifi BQ16]
+    B -->|GE1-LAN -> WAN/LAN1 10G| ZW[Asus ZenWifi BQ16]
 
     subgraph ZW [Asus ZenWifi BQ16]
         C[Master Node<br/>LAN3 → Client<br/>DHCP: 192.168.50.1]
