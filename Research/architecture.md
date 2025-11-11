@@ -18,4 +18,6 @@
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/) : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
-- [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service 
+- [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
+- [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
+- 
