@@ -10,7 +10,7 @@
 | VM03          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
 | ???           | Portainer CE              | Manage Containers (Docker, Kubernetes, ...)          | [Github](https://github.com/portainer/portainer) |
 
-
+---
 
 ## Still to check
 - [Let's Encrypt](https://letsencrypt.org/) : For public domain names, to link up with the Proxy on the WAN side?
@@ -21,6 +21,8 @@
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
 - [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
 - [Portainer Business](https://www.portainer.io/) or [Portainer CE](https://github.com/portainer/portainer) : Business is free for max 5 nodes, CE is always free but no SSO via OIDC
+
+---
 
 ## Some Keywords to Remember
 - **SAML** : Security Assertion Markup Language - Open standard for Single Sign-On (SSO) and identity federation. Used to authenticate multiple users with multiple services through a central identity provider (Authentik).
