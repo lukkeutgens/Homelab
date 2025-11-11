@@ -12,17 +12,18 @@
 
 ---
 
-## Still to check
-- [Let's Encrypt](https://letsencrypt.org/) : For public domain names, to link up with the Proxy on the WAN side?
-- [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
-- [No-IP](https://www.noip.com/) : Free dynamic DNS
-- [Dynu](https://www.dynu.com/) : Free dynamic DNS
-- [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
+## Software to check
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
 - [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
 - [Portainer Business](https://www.portainer.io/) or [Portainer CE](https://github.com/portainer/portainer) : Business is free for max 5 nodes, CE is always free but no SSO via OIDC
 - [OpenObserve](https://github.com/openobserve/openobserve) : For monitoring servers (Link with Authentik with [Dex](https://github.com/dexidp/dex) as SSO-bridge) 
 
+## Other things to check
+- [Let's Encrypt](https://letsencrypt.org/) : For public domain names, to link up with the Proxy on the WAN side?
+- [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
+- [No-IP](https://www.noip.com/) : Free dynamic DNS
+- [Dynu](https://www.dynu.com/) : Free dynamic DNS
+- [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
 ---
 
 ## Some Keywords to Remember
