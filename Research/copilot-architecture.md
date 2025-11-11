@@ -1,0 +1,106 @@
+# 🧱 Homelab Architecture Overview
+> When I asked Microsoft Copilot how to setup the architecture with cyber security as guideline, I've gotten this document. Now, never believe AI but let's research it but it's not all bad.
+
+This document outlines the architecture of a secure, modular homelab running on a Slimbook One Mini-PC with Proxmox VE. It is designed to support virtualized services, centralized authentication, secrets management, and secure remote access — all aligned with cybersecurity best practices.
+
+---
+
+## 🔐 Security Objectives
+
+- **Confidentiality**: Protect sensitive data and credentials across services
+- **Integrity**: Ensure system configurations and secrets are tamper-proof
+- **Availability**: Maintain service uptime through segmentation and monitoring
+- **Auditability**: Enable logging and traceability for all access and changes
+
+---
+
+## 🧩 Core Components
+
+| Layer              | Component              | Technology Stack             |
+| :---               | :---                   | :---                         |
+| Hypervisor         | Virtualization         | Proxmox VE (KVM + LXC)       |
+| Reverse Proxy      | SSL termination & routing | NGINX Proxy Manager (Docker) |
+| Authentication     | Identity & Access Mgmt | Keycloak (VM with PostgreSQL)|
+| Secrets Management | Credential storage     | Vaultwarden or HashiCorp Vault |
+| VPN Access         | Secure remote access   | WireGuard (container or VM)  |
+| Monitoring         | Metrics & dashboards   | Prometheus + Grafana         |
+| DNS Filtering      | Privacy & ad-blocking  | Pi-hole + Unbound            |
+| Certificate Mgmt   | Internal PKI           | Step CA or Certbot           |
+
+---
+
+## 🧱 VM Layout (Slimbook: 16 threads / 32GB RAM)
+
+| VM Name         | Purpose                          | vCPU  | RAM   |
+| :---            | :---                             | :---: | :---: |
+| `vm-gateway`    | WireGuard VPN + DNS filtering    | 2     | 2GB   |
+| `vm-auth`       | Keycloak + PostgreSQL backend    | 4     | 6GB   |
+| `vm-proxy`      | NGINX Proxy Manager              | 2     | 2GB   |
+| `vm-monitoring` | Prometheus + Grafana             | 2     | 2GB   |
+| `vm-dockerhost` | Docker services (Vaultwarden, etc.) | 4  | 8GB   |
+| `vm-bastion`    | SSH jump host                    | 1     | 1GB   |
+
+
+---
+
+## 🧭 Network Flow Diagram
+
+[Internet]
+    ↓ 
+[WireGuard VPN] ←→ [Firewall Rules] 
+    ↓ 
+[NGINX Proxy Manager] 
+    ↓
+[Keycloak IAM] ←→ [PostgreSQL DB]
+    ↓ 
+[Internal Services: Grafana, Vaultwarden, Portainer, etc.] 
+    ↑ 
+[Step CA / Certbot] [Secrets Vault]
+
+---
+
+## 🔧 OS Hardening (Debian/Ubuntu LTS)
+
+- Apply [CIS Benchmark](https://www.cisecurity.org/benchmark/ubuntu-linux/) controls:
+  - Disable unused services
+  - Enforce SSH key-only login
+  - Configure Auditd and AppArmor
+  - Enable UFW or nftables firewall
+  - Secure kernel parameters via `/etc/sysctl.d/`
+- Automate with Ansible or shell scripts
+- Document changes in `hardening.md`
+
+---
+
+## 📘 Compliance Mapping
+
+| Control Domain     | Implementation Example                     |
+|--------------------|---------------------------------------------|
+| Access Control     | Keycloak RBAC + VPN segmentation            |
+| Cryptography       | Step CA + HTTPS everywhere                  |
+| Monitoring         | Prometheus + Grafana + Auditd               |
+| Secrets Handling   | Vaultwarden + SOPS for Git secrets          |
+| Remote Access      | WireGuard VPN + Bastion host                |
+| Change Management  | GitOps + versioned config repositories      |
+
+---
+
+## 📦 Future Enhancements
+
+- Integrate LDAP or external IdP with Keycloak
+- Add SIEM-like logging via Loki or ELK stack
+- Expand backup strategy with restic or Borg
+- Explore container isolation with Podman rootless
+
+---
+
+## 🧾 License & Attribution
+
+This architecture is inspired by open-source projects including:
+- [Thakis/homelab](https://github.com/Thakis/homelab)
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
+- [Step CA](https://smallstep.com/docs/step-ca)
+
+---
+
+
