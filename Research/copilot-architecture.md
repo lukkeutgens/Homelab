@@ -45,7 +45,6 @@ This document outlines the architecture of a secure, modular homelab running on 
 
 ## 🧭 Network Flow Diagram
 
-| Network                              |
 | :---:                                |
 | Internet                             |
 | ↓                                    |
