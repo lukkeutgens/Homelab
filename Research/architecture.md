@@ -3,7 +3,7 @@
 
 ```mermaid
 flowchart TD
-    A[Internet<br/>Public IP] <-->|Fiber| B[ISP Gateway<br/>GE1-LAN: 192.168.192.5]
+    A[Internet] <-->|Fiber| B[ISP Gateway<br/>WAN-IP: xxx.xxx.xxx.xxx<br/>LAN-IP: 192.168.192.5]
     B <-->|GE1-LAN → WAN/LAN1-10G| ZW
 
     %% ZenWifi groep met horizontale layout
