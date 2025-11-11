@@ -60,15 +60,24 @@ This document outlines the architecture of a secure, modular homelab running on 
 | Step CA / Certbot & Secrets Vault    |
 
 [Internet]
+
     ↓ 
+    
 [WireGuard VPN] ←→ [Firewall Rules] 
+
     ↓ 
 [NGINX Proxy Manager] 
+
     ↓
+    
 [Keycloak IAM] ←→ [PostgreSQL DB]
+
     ↓ 
+    
 [Internal Services: Grafana, Vaultwarden, Portainer, etc.] 
+
     ↑ 
+    
 [Step CA / Certbot] [Secrets Vault]
 
 ---
