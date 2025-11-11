@@ -1,38 +1,9 @@
 # Architecture
 
+## Software Stack
 
-```mermaid
-flowchart TD
-    A[Internet] <-->|Fiber| B[ISP Gateway<br/>WAN-IP: xxx.xxx.xxx.xxx<br/>LAN-IP: 192.168.192.5]
-    B <-->|GE1-LAN → WAN/LAN1 10G| ZW
-
-    %% ZenWifi groep met horizontale layout
-    subgraph ZW [Asus ZenWifi BQ16]
-        direction LR
-        C[BQ16 Master<br/>IP: 192.168.50.1<br/>DHCP Server]
-        D[BQ16 Client 1<br/>IP: 192.168.50.32]
-        C <--> | LAN3 -> WAN/LAN1 10G | D
-    end
-
-    %% Switch onder Master
-    C <-->|LAN2 -> Px 2.5G| S[Switch<br/>Port1: LAN2-2.5G]
-    S <-->|Px -> P1 2.5G| SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
-
-    %% Slimbook groep
-    subgraph SLIM [Slimbook One Mini PC]
-        P[Proxmox Host]
-        %% Hier komen later de VM's
-    end
-
-    %% Styling
-    style A fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
-    style B fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
-    style C fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
-    style D fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
-    style S fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
-    style SLIM fill:#228b22,color:#ffffff,stroke:#1e7a1e,stroke-width:2px
-    style ZW fill:#228b22,color:#ffffff,stroke:#1e7a1e,stroke-width:2px
-    style P fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
-
-    linkStyle default stroke:#ffffff,stroke-width:1.5px,color:#ffffff
-```
+| Software                | Description                                          | Link                                                                                             |
+| :---                    | :---                                                 | :---                                                                                             |
+| Proxmox                 | Hyperviser                                           | [Proxmox overview](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)     |
+| NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [NGINX Proxy Manager](https://nginxproxymanager.com/)                                            |
+| 
