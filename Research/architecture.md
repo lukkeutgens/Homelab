@@ -12,8 +12,14 @@ flowchart TD
         C -->|LAN3-10G → WAN/LAN1-10G| D
     end
 
-    style ZW fill:#e6f7ff,stroke:#0077aa,stroke-width:2px
-    style C fill:#d0f0ff,stroke:#0077aa,stroke-width:2px
-    style D fill:#f0faff,stroke:#0077aa,stroke-width:1.5px
-    style B fill:#ffe0b3,stroke:#cc7a00,stroke-width:2px
+    %% Styling
+    style A fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
+    style B fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
+    style C fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
+    style D fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
+    style ZW fill:#228b22,color:#ffffff,stroke:#1e7a1e,stroke-width:2px
+
+    linkStyle 0 stroke:#000000,stroke-width:1.5px,color:#ffffff
+    linkStyle 1 stroke:#000000,stroke-width:1.5px,color:#ffffff
+    linkStyle 2 stroke:#000000,stroke-width:1.5px,color:#ffffff
 ```
