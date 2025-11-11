@@ -8,15 +8,16 @@ flowchart TD
 
     subgraph ZW [Asus ZenWifi BQ16]
         C[BQ16 Master<br/>IP: 192.168.50.1<br/>DHCP Server]
-        D[BQ16 Client 1<br/>IP: 192.168.50.32<br/>]
-        C <-->|LAN3-10G → WAN/LAN1-10G| D
+        D[BQ16 Client 1<br/>IP: 192.168.50.32]
+        C --- D
     end
 
-    C <-->|LAN2-2.5G ↔ Port1| S[Switch]
-    S <-->|Px ↔ P1-2.5G| SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
+    %% Positioneer switch onder Master
+    C --> S[Switch<br/>Port1: LAN2-2.5G]
+    S --> SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
 
     subgraph SLIM [Slimbook One Mini PC]
-        P
+        P[Proxmox Host]
         %% Hier komen later de VM's
     end
 
