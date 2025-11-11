@@ -11,6 +11,7 @@ flowchart TD
         direction LR
         C[BQ16 Master<br/>IP: 192.168.50.1<br/>DHCP Server]
         D[BQ16 Client 1<br/>IP: 192.168.50.32]
+        C <--> | LAN3 -> WAN/LAN1 10G | D
     end
 
     %% Switch onder Master
