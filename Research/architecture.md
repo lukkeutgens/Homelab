@@ -8,7 +8,8 @@
 | VM01          | NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM02          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
 | VM03          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
-| ???           | Portainer CE              | Manage Containers (Docker, Kubernetes, ...)          | [Github](https://github.com/portainer/portainer) |
+| ???           | Cockpit                 | Web based server management                          | [Website](https://cockpit-project.org/), [Github](https://github.com/cockpit-project/cockpit)  |
+| ???           | Portainer CE            | Manage Containers (Docker, Kubernetes, ...)          | [Github](https://github.com/portainer/portainer) |
 
 ---
 
@@ -24,6 +25,13 @@
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/) : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
+---
+
+## Notes for Cockpit
+Can not simple be connected with Authentik. This needs to be done with NGINX Proxy manager
+
+https://cockpit-project.org/guide/latest/authentication
+
 ---
 
 ## Some Keywords to Remember
