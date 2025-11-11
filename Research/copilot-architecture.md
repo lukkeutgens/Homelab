@@ -47,7 +47,7 @@ This document outlines the architecture of a secure, modular homelab running on 
 ```text
                  [Internet]
                      ↓
-               [WireGuard VPN] ←→ [Firewall]
+               [WireGuard VPN] ←→ [Firewall Rules]
                      ↓
             [NGINX Proxy Manager]
                      ↓
