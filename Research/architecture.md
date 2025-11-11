@@ -3,13 +3,13 @@
 
 ```mermaid
 flowchart TD
-    A[Internet<br>Public IP] -->|Fiber| B[ISP Gateway<br/>GE1-LAN: 192.168.192.5]
-    B -->|GE1-LAN -> WAN/LAN1 10G| ZW[Asus ZenWifi BQ16]
+    A[Internet<br/>Public IP] -->|Fiber| B[ISP Gateway<br/>GE1-LAN: 192.168.192.5]
+    B -->|GE1-LAN -> WAN/LAN1-10G| ZW[Asus ZenWifi BQ16]
 
     subgraph ZW [Asus ZenWifi BQ16]
-        C[Master Node<br/>LAN3 → Client<br/>DHCP: 192.168.50.1]
-        D[Client Node<br/>WAN/LAN1: uplink<br/>IP: 192.168.50.32]
-        C -->|10G LAN3 → WAN/LAN1| D
+        C[Master Node<br/>IP: 192.168.50.1<br/>DHCP Server]
+        D[Client Node 1<br/>IP: 192.168.50.32<br/>]
+        C -->|LAN3-10G → WAN/LAN1-10G| D
     end
 
     style ZW fill:#e6f7ff,stroke:#0077aa,stroke-width:2px
