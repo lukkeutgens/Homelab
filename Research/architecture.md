@@ -7,8 +7,8 @@ flowchart TD
     B <-->|GE1-LAN -> WAN/LAN1-10G| ZW[Asus ZenWifi BQ16]
 
     subgraph ZW [Asus ZenWifi BQ16]
-        C[Master Node<br/>IP: 192.168.50.1<br/>DHCP Server]
-        D[Client Node 1<br/>IP: 192.168.50.32<br/>]
+        C[BQ16 Master<br/>IP: 192.168.50.1<br/>DHCP Server]
+        D[BQ16 Client 1<br/>IP: 192.168.50.32<br/>]
         C <-->|LAN3-10G → WAN/LAN1-10G| D
     end
 
