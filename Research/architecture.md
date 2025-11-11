@@ -18,4 +18,4 @@
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/] : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
-- [Keycloak](https://www.keycloak.org/) of [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service 
+- [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service 
