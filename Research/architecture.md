@@ -16,7 +16,8 @@ flowchart TD
     S <-->|Px ↔ P1-2.5G| SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
 
     subgraph SLIM [Slimbook One Mini PC]
-    SLIM
+        SLIM
+    end
     %% Hier komen later de VM's
 
     %% Styling
