@@ -58,7 +58,8 @@ This document outlines the architecture of a secure, modular homelab running on 
 | ↑                                    |
 | Step CA / Certbot & Secrets Vault    |
 
-Internet
+```text
+[Internet]
    ↓
 [WireGuard VPN] ←→ [Firewall]
    ↓
@@ -69,7 +70,7 @@ Internet
 [Internal Services: Grafana, Vaultwarden, Portainer]
    ↑
 [Step CA / Certbot]     [Secrets Vault]
-
+```
 
 ---
 
