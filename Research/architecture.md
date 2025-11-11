@@ -2,8 +2,9 @@
 
 ## Software Stack
 
-| Software                | Description                                          | Link                                                                                             |
-| :---                    | :---                                                 | :---                                                                                             |
-| Proxmox                 | Hyperviser                                           | [Proxmox overview](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)     |
-| NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [NGINX Proxy Manager](https://nginxproxymanager.com/)                                            |
-| 
+| Software                | Description                                          | Link                                                                                                         |
+| :---                    | :---                                                 | :---                                                                                                         |
+| Proxmox                 | Hyperviser                                           | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)                          |
+| NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/) [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
+| Step CA                 | Certificate Manager for services & devices           | [Website](https://smallstep.com/docs/step-ca/)                                                               |
+
