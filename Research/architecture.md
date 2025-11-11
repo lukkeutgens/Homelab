@@ -16,6 +16,6 @@
 - [Let's Encrypt](https://letsencrypt.org/) : For public domain names, to link up with the Proxy on the WAN side?
 - [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
-- [Dynu](https://www.dynu.com/] : Free dynamic DNS
+- [Dynu](https://www.dynu.com/) : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service 
