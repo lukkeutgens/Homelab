@@ -8,7 +8,7 @@
 | VM01          | NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM02          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
 | VM03          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
-| ???           | Portainer               | Manage Containers (Docker, Kubernetes, ...)          | [Github](https://github.com/portainer/portainer) |
+| ???           | Portainer CE              | Manage Containers (Docker, Kubernetes, ...)          | [Github](https://github.com/portainer/portainer) |
 
 
 
@@ -20,4 +20,4 @@
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
 - [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
-- 
+- [Portainer Business](https://www.portainer.io/) or [Portainer CE](https://github.com/portainer/portainer) : Business is free for max 5 nodes, CE is always free but no SSO via OIDC
