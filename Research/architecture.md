@@ -19,7 +19,7 @@ flowchart TD
     style D fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
     style ZW fill:#228b22,color:#ffffff,stroke:#1e7a1e,stroke-width:2px
 
-    linkStyle 0 stroke:#000000,stroke-width:1.5px,color:#ffffff
-    linkStyle 1 stroke:#000000,stroke-width:1.5px,color:#ffffff
-    linkStyle 2 stroke:#000000,stroke-width:1.5px,color:#ffffff
+    linkStyle 0 stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    linkStyle 1 stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    linkStyle 2 stroke:#ffffff,stroke-width:1.5px,color:#ffffff
 ```
