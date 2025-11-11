@@ -4,7 +4,7 @@
 ```mermaid
 flowchart TD
     A[Internet] <-->|Fiber| B[ISP Gateway<br/>WAN-IP: xxx.xxx.xxx.xxx<br/>LAN-IP: 192.168.192.5]
-    B <-->|GE1-LAN → WAN/LAN1-10G| ZW
+    B <-->|GE1-LAN → WAN/LAN1 (10G)| ZW
 
     %% ZenWifi groep met horizontale layout
     subgraph ZW [Asus ZenWifi BQ16]
@@ -14,8 +14,8 @@ flowchart TD
     end
 
     %% Switch onder Master
-    C <-->|LAN2-2.5G -> Px| S[Switch<br/>Port1: LAN2-2.5G]
-    S <-->|Px -> P1-2.5G| SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
+    C <-->|LAN2 -> Px (2.5G)| S[Switch<br/>Port1: LAN2-2.5G]
+    S <-->|Px -> P1 (2.5G)| SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
 
     %% Slimbook groep
     subgraph SLIM [Slimbook One Mini PC]
