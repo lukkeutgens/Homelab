@@ -1,5 +1,5 @@
 # 🧱 Homelab Architecture Overview
-> When I asked Microsoft Copilot how to setup the architecture with cyber security as guideline, I've gotten this document. Now, never believe AI but let's research it but it's not all bad.
+> When I asked Microsoft Copilot how to design a secure architecture with cybersecurity as the guiding principle, it generated this document. Of course, you should never blindly trust AI — but let’s investigate it further. It’s not a bad starting point.
 
 This document outlines the architecture of a secure, modular homelab running on a Slimbook One Mini-PC with Proxmox VE. It is designed to support virtualized services, centralized authentication, secrets management, and secure remote access — all aligned with cybersecurity best practices.
 
