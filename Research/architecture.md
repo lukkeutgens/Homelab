@@ -4,27 +4,24 @@
 ```mermaid
 flowchart TD
     A[Internet<br/>Public IP] <-->|Fiber| B[ISP Gateway<br/>GE1-LAN: 192.168.192.5]
-    B <-->|GE1-LAN → WAN/LAN1-10G| ZW[Asus ZenWifi BQ16]
+    B <-->|GE1-LAN → WAN/LAN1-10G| ZW
 
+    %% ZenWifi groep met horizontale layout
     subgraph ZW [Asus ZenWifi BQ16]
+        direction LR
         C[BQ16 Master<br/>IP: 192.168.50.1<br/>DHCP Server]
         D[BQ16 Client 1<br/>IP: 192.168.50.32]
-        C --- D
     end
 
-    %% Positioneer switch onder Master
+    %% Switch onder Master
     C --> S[Switch<br/>Port1: LAN2-2.5G]
     S --> SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
 
+    %% Slimbook groep
     subgraph SLIM [Slimbook One Mini PC]
         P[Proxmox Host]
         %% Hier komen later de VM's
     end
-
-    %% Layout hint: dummy node om D rechts van C te houden
-    C --> X[ ]
-    X --- D
-    style X fill:transparent,stroke:transparent
 
     %% Styling
     style A fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
@@ -37,5 +34,4 @@ flowchart TD
     style P fill:#0077cc,color:#ffffff,stroke:#005fa3,stroke-width:1.5px
 
     linkStyle default stroke:#ffffff,stroke-width:1.5px,color:#ffffff
-
 ```
