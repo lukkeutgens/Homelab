@@ -14,8 +14,8 @@ flowchart TD
     end
 
     %% Switch onder Master
-    C --> S[Switch<br/>Port1: LAN2-2.5G]
-    S --> SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
+    C <-->|LAN2-2.5G -> Px| S[Switch<br/>Port1: LAN2-2.5G]
+    S <-->|Px -> P1-2.5G| SLIM[Mini PC: Slimbook One<br/>IP: 192.168.50.x<br/>OS: Proxmox]
 
     %% Slimbook groep
     subgraph SLIM [Slimbook One Mini PC]
