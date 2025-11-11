@@ -7,6 +7,8 @@
 | Slimbook One  | Proxmox                 | Hypervisor for running VM's                          | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)                          |
 | VM01          | NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM02          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)                                                               |
+| VM03          | Keycloak                |                                                      | [Website](https://www.keycloak.org/), [Github](https://github.com/keycloak/keycloak)                         |
+
 
 
 
@@ -16,4 +18,4 @@
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/] : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
-- 
+- [Keycloak](https://www.keycloak.org/) of [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service 
