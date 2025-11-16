@@ -113,7 +113,7 @@ I will not use it for now
 --- 
 
 ## Email notifications
-Proxmox uses Postfix to send emails. Since Debian is its backbone, you can also use this service to send notifications directly from Debian itself. For example, Fail2ban can use Postfix to notify you when it blocks suspicious 
+Proxmox uses Postfix to send emails. Since Debian is its backbone, you can also use this service to send notifications directly from Debian itself. For example, Fail2ban can use Postfix to notify you when it blocks suspicious activity.
 
 ---
 
