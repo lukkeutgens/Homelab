@@ -19,6 +19,7 @@ Some information on how to setup the DNS-server. I still need to research wich s
 - DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
 - This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
 - The DNS-server must be in my local LAN and NOT behind the reverse proxy
+- My Asus Zenwifi will distribute the DNS-server to the LAN-clients
 
 An example how Proxmox will renew it's internal certificate through ACME
 ```text
