@@ -1,11 +1,12 @@
 # Proxmox Learning
 Some notes about Proxmox installing and setup
 
-## Questions that come up
-- How to remote connect to Proxmox (only LAN)?
-- Setup security (Hardening, auto-updates, ... )
-- Certificates (self-signed)
-- Setup backups for Proxmox itself and all the running VM's
+## Questions that came up
+- How to remote connect to Proxmox (only LAN)? Through the webserver, just surf to https://ipadress:8006
+- Setup security (Hardening, auto-updates, ... ). Yes, use OS-hardening as for Debian.
+- Firewall on Proxmox only handles Proxmox and not the VM's or you should edit the bridge settings.
+- Other questions I had are answered below.
+- Enable notifications: "datacenter" -> "notifications" to setup emails.
 
 --- 
 
@@ -100,12 +101,6 @@ Usefull for better performance, special hardware for gaming/AI-workloads, USB-do
 Only possible when activated through BIOS/UEFI and supported by CPU. 
 
 You can check this from Proxmox if it is enabled but not really needed in my case here.
-
---- 
-
-## Other settings
-- Enable notifications: "datacenter" -> "notifications"
-- 
 
 --- 
 
