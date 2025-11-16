@@ -9,8 +9,7 @@ Some notes about Proxmox installing and setup
 
 --- 
 
-## Tips about settings
-### Configure Updates
+## Configure Updates
 Setup the repositories correctly to get the newest (security) updates
 - Enterprise repository is for a payed subscription (disabled it)
 - Add the "No-Subscription" repository
@@ -18,7 +17,9 @@ Setup the repositories correctly to get the newest (security) updates
 - Leave the debian repositories because Proxmox is built on Debian
 - Sometimes the nodes need a reboot
 
-### Trusted TLS Certificates
+--- 
+
+## Trusted TLS Certificates
 [Proxmox Wiki Certificate Management](https://pve.proxmox.com/wiki/Certificate_Management)
 
 I will try to use the ACME but first need to install a DNS-server container and also VM's with a reverse proxy and Step CA.
@@ -38,7 +39,9 @@ From Tutorials:
 - Setup a cluster DNS-name and also node DNS names. Use a DNS-server with health checks when using the cluster name.
 - A cluster can have maximum 3 nodes.
 
-### Storage
+--- 
+
+## Storage
 - Slimbook One mini-pc with 1TB SSD at start which will run Proxmox.
 - External USB-C Kingston 4TB SSD as extra cold storage
 - Synology NAS
@@ -50,13 +53,44 @@ Setup in datacenter storage menu
 - Use a NFS drive on a NAS (also for external disk?)
 
 Setup according to Copilot
-- Proxmox host disk (Slimbook) for OS and VM-disks (hot storage = fast)
-- External SSD for weekly full backups off everything and extra cold storage (slower) but SSD is also very fast).
-- NAS for daily imcremental backups with NFS-share
-- When a VM needs more data, link with NAS through NFS/iSCSI.
+- Proxmox host disk (Slimbook) for OS and VM-disks (hot storage = fast) -> ZSF File system
+- External SSD for weekly full backups off everything and extra cold storage (slower) but SSD is also very fast). -> LVM-thin
+- NAS for daily imcremental backups with NFS-share -> Independent off ZSF or LVM-thin
+- When a VM needs more data, link with NAS through NFS/iSCSI -> Independent off ZSF or LVM-thin
 
-### Backup jobs
+File system options:
+- ZFS : Uses 1GB RAM for 1TB disk storage. Most realible for snapshots with better integrity.
+- LVM-thin : Lightweight, lesser overhead but also lesser features. Good when you don't need ZFS.
+
+My setup for now:
+- Slimbook 1TB SSD (ZFS) for active VM-disks.
+- External SSD (ext4) for weekly full backups. Safer because ZFS does not like I/O errors which could happen with an USB-drive.
+- NAS (LAN) for daily snapshots
+
+Format external SSD to `ext4`
+Connect to Slimbook and then with a console:
+```bash
+lsblk                           # Check which device ex.: /dev/sdb
+mkfs.ext4 /dev/sdb              # Format drive to ext4
+mkdir /mnt/backupssd            # Make a directory for backups
+mount /dev/sdb /mnt/backupssd   # Mount the disk to the directory
+```
+
+
+--- 
+
+## Backup jobs
 Backing up everything is VERY IMPORTANT!
+- Setup with notifications.
+- Setup retention, no need to keep the older ones
+- 
+
+Backup options
+- Stop mode: VM will be stopped and then a fill consisten backup taken
+- Suspend mode: VM will be paused, then a backup from memory and disk are taken
+- Snapshot mode: Most used because VM stays active. Not all filesystems allow this (LVM-thin or ZFS)
+
+--- 
 
 
 ### Other settings
