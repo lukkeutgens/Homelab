@@ -103,12 +103,14 @@ You can check this from Proxmox if it is enabled but not really needed in my cas
 
 --- 
 
-### Other settings
+## Other settings
 - Enable notifications: "datacenter" -> "notifications"
 - 
 
 --- 
 
 ## YouTube Tutorials
-- [Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
+[Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
+
+VM Best practices (according to tutorial)
 - 
