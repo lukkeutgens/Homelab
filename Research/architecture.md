@@ -5,7 +5,7 @@
 | Device        | Software                | Description                                          | Link                                                                                  |
 | :---          | :---                    | :---                                                 | :---                                                                                  |
 | Slimbook One  | Proxmox                 | Hypervisor for running VM's                          | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)   |
-| Container     | Technitium DNS          | DNS-server as container in Proxmox                   |          |
+| Container     | Technitium DNS          | DNS-server as container in Proxmox                   | [Website](https://technitium.com/dns/)         |
 | VM          | Caddy Reverse Proxy    | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
 | VM          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
