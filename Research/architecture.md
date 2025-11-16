@@ -20,7 +20,13 @@
 - [OpenObserve](https://github.com/openobserve/openobserve) : For monitoring servers (Link with Authentik with [Dex](https://github.com/dexidp/dex) as SSO-bridge) 
 
 ## Other things to check
+### Domain Names
+Pricing are not really clear presented. At Easyhost it is shown €0,49 but then jumps to €2,99 a year? So I need to study these websites further.
 - [Let's Encrypt](https://letsencrypt.org/) : For public domain names, to link up with the Proxy on the WAN side?
+- [Combell]([https://www.combell.com/](https://www.combell.com/nl/domeinnamen) : €2,99 a year
+- [EasyHost](https://www.easyhost.be/nl/domeinnaam-kopen) : €2,99 a year
+
+### Dynamic DNS
 - [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/) : Free dynamic DNS
