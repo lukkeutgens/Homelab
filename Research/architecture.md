@@ -5,7 +5,7 @@
 | Device        | Software                | Description                                          | Link                                                                                  |
 | :---          | :---                    | :---                                                 | :---                                                                                  |
 | Slimbook One  | Proxmox                 | Hypervisor for running VM's                          | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)   |
-| VM          | DNS-Server              | To research which one                                  |          |
+| Container     | DNS-Server              | To research which one                                  |          |
 | VM          | NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
 | VM          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
@@ -22,7 +22,10 @@
 
 ## Other things to check
 ### DNS-Server
-A good DNS-server to run on the local LAN network for internal and internet use.
+A good DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
+- This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
+- The DNS-server must be in my local LAN and NOT behind the reverse proxy
+
 
 ### Domain Names
 Pricing are not really clear presented. At Easyhost it is shown €0,49 but then jumps to €2,99 a year? So I need to study these websites further.
