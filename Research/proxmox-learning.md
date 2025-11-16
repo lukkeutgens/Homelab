@@ -110,7 +110,11 @@ You can check this from Proxmox if it is enabled but not really needed in my cas
 --- 
 
 ## YouTube Tutorials
-[Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
+Link: [Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
 
 VM Best practices (according to tutorial)
-- 
+
+
+--- 
+
+
