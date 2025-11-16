@@ -41,6 +41,7 @@ An example how Proxmox will renew it's internal certificate through ACME
    │  (Installs new TLS-certificate)
 ```
 
+---
 
 ## Software to check
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
@@ -49,11 +50,6 @@ An example how Proxmox will renew it's internal certificate through ACME
 - [OpenObserve](https://github.com/openobserve/openobserve) : For monitoring servers (Link with Authentik with [Dex](https://github.com/dexidp/dex) as SSO-bridge)
 
 ## Other things to check
-### DNS-Server
-A good DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
-- This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
-- The DNS-server must be in my local LAN and NOT behind the reverse proxy
-
 
 ### Domain Names
 Pricing are not really clear presented. At Easyhost it is shown €0,49 but then jumps to €2,99 a year? So I need to study these websites further.
