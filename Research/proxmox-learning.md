@@ -119,8 +119,13 @@ VM Best practices (according to tutorial)
   - As SCSI Controller select VirtIO SCSI single
   - Select the Qemu Agent for better integration between Proxmox and guestOS.
   - For Windows also select TPM
-  -   
-
+  - If using a graphics card also select VirtIO-GPU
+  - For machine: "q35" is the newer, default "i440fx" is the older one (for older machines)
+  - For BIOS: "OVMF (UEFI)" is the newer one, default "seaBIOS" is the older one.
+- Under network:
+  - Setup bridge
+  - Model: VirtIO
+ 
 --- 
 
 
