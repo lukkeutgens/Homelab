@@ -6,7 +6,7 @@
 | :---          | :---                    | :---                                                 | :---                                                                                  |
 | Slimbook One  | Proxmox                 | Hypervisor for running VM's                          | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)   |
 | Container     | DNS-Server              | To research which one                                  |          |
-| VM          | NGINX Proxy Manager     | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
+| VM          | Caddy Reverse Proxy    | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
 | VM          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
 | ???           | Cockpit                 | Web based server management                          | [Website](https://cockpit-project.org/), [Github](https://github.com/cockpit-project/cockpit)  |
@@ -50,7 +50,20 @@ An example how Proxmox will renew it's internal certificate through ACME
    │  (Installs new TLS-certificate)
 ```
 
+## Reverse Proxy
+I will setup a reverse proxy as an extra security step in my homelab. All VM's will run behind this proxy.
 
+### Notes
+- Must run as VM for better isolation.
+- Must have health checks to see if nodes are online
+- Must be compatible with Step CA (ACME-endpoint), self-signed and from the net
+- Direct installable in Debian is a big plus. So no need for container software.
+
+### Software to consider:
+- [NGINX Proxy Manager](https://nginxproxymanager.com/) : Well known, but no health checks of nodes
+- [HAProxy](https://www.haproxy.org/) : Robust load balancer with health checks
+- [Traefik](https://traefik.io/traefik) : Modern reverse proxy with service discovery and health checks
+- [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy) : Modern webserver/reverse proxy with Let's encrypt built in
 
 ---
 
