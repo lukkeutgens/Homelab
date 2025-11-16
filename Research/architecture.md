@@ -14,6 +14,34 @@
 
 ---
 
+## DNS-Server
+Some information on how to setup the DNS-server. I still need to research wich service I will use.
+A good DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
+- This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
+- The DNS-server must be in my local LAN and NOT behind the reverse proxy
+
+An example how Proxmox will renew it's internal certificate through ACME
+```text
+[Proxmox Host] 192.168.50.150
+   │  (ACME client requests cert at stepca.homelab.lan)
+   ▼
+[DNS-server container] 192.168.50.151
+   │  (resolves stepca.homelab.lan → 192.168.50.152)
+   ▼
+[Reverse Proxy VM] 192.168.50.152
+   │  (vhost: stepca.homelab.lan → backend 10.0.0.10:9000)
+   ▼
+[Step CA VM] 10.0.0.10
+   │  (ACME provisioner processes request, gives back new certificate)
+   ▼
+[Reverse Proxy VM] 192.168.50.152
+   │  (Sends answer back to Proxmox)
+   ▼
+[Proxmox Host] 192.168.50.150
+   │  (Installs new TLS-certificate)
+```
+
+
 ## Software to check
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
 - [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
