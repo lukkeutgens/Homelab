@@ -28,7 +28,7 @@ All open-source (free) and ACME compatible (renewing certificates)
 - [AdGuard Home Github](https://github.com/AdguardTeam/AdGuardHome) : More modern UI, more options but heavier
 - [Pi‑hole / Unbound](https://docs.pi-hole.net/) : Lightweight with Web-UI. Primarly focus on adblocking
 - [CoreDNS](https://coredns.io/) : 
-- [technitium](https://technitium.com/dns/) : Full DNS-server with modern UI, support for DNSSEC, DoH/DoT and caching. More control then Pi-hole but also lightweight.
+- [Technitium](https://technitium.com/dns/) : Full DNS-server with modern UI, support for DNSSEC, DoH/DoT and caching. More control then Pi-hole but also lightweight.
 
 ### Flow example
 An example how Proxmox will renew it's internal certificate through ACME
