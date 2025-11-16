@@ -104,6 +104,11 @@ You can check this from Proxmox if it is enabled but not really needed in my cas
 
 --- 
 
+## Email notifications
+Proxmox uses Postfix to send emails and because Debian is it's backbone, you can also use this service to send notifications from Debian itself. For example when you install fail2ban as extra protection.
+
+---
+
 ## YouTube Tutorials
 Link: [Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
 
