@@ -5,7 +5,7 @@
 | Device        | Software                | Description                                          | Link                                                                                  |
 | :---          | :---                    | :---                                                 | :---                                                                                  |
 | Slimbook One  | Proxmox                 | Hypervisor for running VM's                          | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)   |
-| Container     | DNS-Server              | To research which one                                  |          |
+| Container     | Technitium DNS          | DNS-server as container in Proxmox                   |          |
 | VM          | Caddy Reverse Proxy    | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
 | VM          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
 | VM          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
@@ -29,6 +29,8 @@ All open-source (free) and ACME compatible (renewing certificates)
 - [Pi‑hole / Unbound](https://docs.pi-hole.net/) : Lightweight with Web-UI. Primarly focus on adblocking
 - [CoreDNS](https://coredns.io/) : 
 - [Technitium](https://technitium.com/dns/) : Full DNS-server with modern UI, support for DNSSEC, DoH/DoT and caching. More control then Pi-hole but also lightweight.
+
+For now the selection is Technitium.
 
 ### Flow example
 An example how Proxmox will renew it's internal certificate through ACME
