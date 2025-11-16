@@ -116,10 +116,10 @@ VM Best practices (according to tutorial)
 - When creating a new VM and selected the OS, make sure to select the correct OS-type
 - For Windows select the correct version and also the VirtIO Drivers. These need to be downloaded from the Proxmox website and also added as an ISO-Image under Guest OS. So you will have 2x ISO's. Under "Use CD/DVD.." and under "Guest OS" when Windows is selected.
 - Under System:
--   As SCSI Controller select VirtIO SCSI single
--   Select the Qemu Agent for better integration between Proxmox and guestOS.
--   For Windows also select TPM
--   
+  - As SCSI Controller select VirtIO SCSI single
+  - Select the Qemu Agent for better integration between Proxmox and guestOS.
+  - For Windows also select TPM
+  -   
 
 --- 
 
