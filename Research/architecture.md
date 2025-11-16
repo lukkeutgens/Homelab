@@ -31,6 +31,11 @@ Pricing are not really clear presented. At Easyhost it is shown €0,49 but then
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/) : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
+
+### Certificat Management
+- Let's encrypt for services that will be exposed to the internet
+- Step CA for the internal-only services.
+
 ---
 
 ## Notes for Cockpit
