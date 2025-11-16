@@ -99,7 +99,7 @@ This is done by IOMMU (Intel VT-d or AMD-Vi) who regulate the isolation and mapp
 Usefull for better performance, special hardware for gaming/AI-workloads, USB-dongles and network cards for firewalls.
 Only possible when activated through BIOS/UEFI and supported by CPU. 
 
-Not really needed in my case here.
+You can check this from Proxmox if it is enabled but not really needed in my case here.
 
 --- 
 
