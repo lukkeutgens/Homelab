@@ -114,17 +114,17 @@ Link: [Don’t run Proxmox without these settings!](https://www.youtube.com/watc
 
 VM Best practices (according to tutorial)
 - When creating a new VM and selected the OS, make sure to select the correct OS-type
-- For Windows select the correct version and also the VirtIO Drivers. These need to be downloaded from the Proxmox website and also added as an ISO-Image under Guest OS. So you will have 2x ISO's. Under "Use CD/DVD.." and under "Guest OS" when Windows is selected.
+- For Windows select the correct version and also the VirtIO Drivers. These need to be downloaded from the Proxmox website and also added as an ISO-Image under Guest OS. So you will have 2x ISO's. Under "Use CD/DVD.." and under "Guest OS" when Windows is selected. Windows does not recognise the virtual drivers by default.
 - Under System:
-  - As SCSI Controller select VirtIO SCSI single
-  - Select the Qemu Agent for better integration between Proxmox and guestOS.
-  - For Windows also select TPM
-  - If using a graphics card also select VirtIO-GPU
-  - For machine: "q35" is the newer, default "i440fx" is the older one (for older machines)
-  - For BIOS: "OVMF (UEFI)" is the newer one, default "seaBIOS" is the older one.
+  - As SCSI Controller select VirtIO SCSI single, this is newer and faster then IDE/SATA, single is less overhead.
+  - Select the Qemu Agent. For better integration: shutdown/reboot from Proxmox, IP's reporting, etc...
+  - For Windows also select TPM. Windows 11 requires TMP 2.0, Proxmox offers a virtual TPM.
+  - If using a graphics card also select VirtIO-GPU. Not needed for headless servers.
+  - For machine: "q35" is the newer (PCI support), default "i440fx" is the older one (for older machines). With a new OS, always q35
+  - For BIOS: "OVMF (UEFI)" is the newer one, default "seaBIOS" is the older one. Only seaBIOS for an OS that does not know UEFI.
 - Under network:
   - Setup bridge
-  - Model: VirtIO
+  - Model: VirtIO. This is faster then the emulation of an Intel E1000 or Realtek. Windows also needs VirtIO drivers for this. Linux does not.
  
 --- 
 
