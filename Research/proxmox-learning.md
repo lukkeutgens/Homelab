@@ -6,7 +6,8 @@ Some notes about Proxmox installing and setup
 - Setup security (Hardening, auto-updates, ... )
 - Certificates (self-signed)
 - Setup backups for Proxmox itself and all the running VM's
-- 
+
+--- 
 
 ## Tips about settings
 ### Configure Updates
@@ -29,6 +30,7 @@ Setup the repositories correctly to get the newest (security) updates
 - Enable notifications: "datacenter" -> "notifications"
 - 
 
+--- 
 
 ## YouTube Tutorials
 - [Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
