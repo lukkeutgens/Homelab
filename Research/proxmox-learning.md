@@ -113,7 +113,13 @@ You can check this from Proxmox if it is enabled but not really needed in my cas
 Link: [Don’t run Proxmox without these settings!](https://www.youtube.com/watch?v=VAJWUZ3sTSI&list=WL&index=22&t=31s)
 
 VM Best practices (according to tutorial)
-
+- When creating a new VM and selected the OS, make sure to select the correct OS-type
+- For Windows select the correct version and also the VirtIO Drivers. These need to be downloaded from the Proxmox website and also added as an ISO-Image under Guest OS. So you will have 2x ISO's. Under "Use CD/DVD.." and under "Guest OS" when Windows is selected.
+- Under System:
+-   As SCSI Controller select VirtIO SCSI single
+-   Select the Qemu Agent for better integration between Proxmox and guestOS.
+-   For Windows also select TPM
+-   
 
 --- 
 
