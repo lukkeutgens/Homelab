@@ -119,6 +119,6 @@ https://cockpit-project.org/guide/latest/authentication
 
 ## Some Keywords to Remember
 - **SAML** : Security Assertion Markup Language - Open standard for Single Sign-On (SSO) and identity federation. Used to authenticate multiple users with multiple services through a central identity provider (Authentik).
-- **ACME** :
+- **ACME** : Automatic Certificate Management Environment
 
 
