@@ -108,7 +108,7 @@ Requirements:
 - Supported by the CPU.
 
 You can check from within Proxmox if IOMMU is enabled, but in my case this is not strictly necessary.
-I will not use it for now
+I do not plan to use it for now.
 
 --- 
 
