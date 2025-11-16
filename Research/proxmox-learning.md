@@ -68,7 +68,7 @@ My setup for now:
 - NAS (LAN) for daily snapshots
 
 Format external SSD to `ext4`:
-Connect to Slimbook and then with a console:
+Connect to Slimbook and then with the console from within Proxmox:
 ```bash
 lsblk                           # Check which device ex.: /dev/sdb
 mkfs.ext4 /dev/sdb              # Format drive to ext4
