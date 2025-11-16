@@ -16,11 +16,19 @@
 
 ## DNS-Server
 Some information on how to setup the DNS-server. I still need to research wich service I will use.
+
+### Notes
 - DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
 - This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
 - The DNS-server must be in my local LAN and NOT behind the reverse proxy
 - My Asus Zenwifi will distribute the DNS-server to the LAN-clients
 
+### Possible software
+- [AdGuard Home Github](https://github.com/AdguardTeam/AdGuardHome)
+- [Pi‑hole / Unbound](https://docs.pi-hole.net/)
+- [CoreDNS](https://coredns.io/)
+
+### Flow example
 An example how Proxmox will renew it's internal certificate through ACME
 ```text
 [Proxmox Host] 192.168.50.150
@@ -41,6 +49,8 @@ An example how Proxmox will renew it's internal certificate through ACME
 [Proxmox Host] 192.168.50.150
    │  (Installs new TLS-certificate)
 ```
+
+
 
 ---
 
