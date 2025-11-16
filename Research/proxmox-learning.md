@@ -19,9 +19,12 @@ Setup the repositories correctly to get the newest (security) updates
 - Sometimes the nodes need a reboot
 
 ### Trusted TLS Certificates
+[Proxmox Wiki Certificate Management](https://pve.proxmox.com/wiki/Certificate_Management)
+
 - Best to use a domain name and DNS-provider.
 - DNS Host for Proxmox (not sure about this, I want to keep the Proxmox itself only LAN accessible)
 - Datacenter -> ACME : Uses Let's Encrypt and can be used to setup the online certificates like Cloudflare
+- Add the certificates for each proxmox node (use DNS challenge Type?)
 - 
 
 
