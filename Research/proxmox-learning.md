@@ -8,6 +8,18 @@ Setup the repositories correctly to get the newest (security) updates
 - Add the "No-Subscription" repository
 - Ceph Quincy or Ceph Reef are for three node clusters (n.a. for me at this moment)
 - Leave the debian repositories because Proxmox is built on Debian
+- Sometimes the nodes need a reboot
+
+### Trusted TLS Certificates
+- Best to use a domain name and DNS-provider.
+- DNS Host for Proxmox (not sure about this, I want to keep the Proxmox itself only LAN accessible)
+- Datacenter -> ACME : Uses Let's Encrypt and can be used to setup the online certificates like Cloudflare
+- 
+
+
+
+### Other settings
+- Enable notifications: "datacenter" -> "notifications"
 - 
 
 
