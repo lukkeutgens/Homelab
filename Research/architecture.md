@@ -27,14 +27,17 @@ Pricing are not really clear presented. At Easyhost it is shown €0,49 but then
 - [EasyHost](https://www.easyhost.be/nl/domeinnaam-kopen) : €2,99 a year
 
 ### Dynamic DNS
+- [Cloudflare](https://www.cloudflare.com/) : Free dynamic DNS
 - [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/) : Free dynamic DNS
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
 
-### Certificat Management
-- Let's encrypt for services that will be exposed to the internet
-- Step CA for the internal-only services.
+### Certificate Management
+- Let's encrypt for services that will be exposed to the internet like a VPN and Authentik
+- Step CA for the internal-only services like Cockpit for server management.
+- Step CA uses also ACME for automatic renewal off certificates wite Step CLI agent. Step CA is a ACME server.
+- 
 
 ---
 
@@ -47,4 +50,4 @@ https://cockpit-project.org/guide/latest/authentication
 
 ## Some Keywords to Remember
 - **SAML** : Security Assertion Markup Language - Open standard for Single Sign-On (SSO) and identity federation. Used to authenticate multiple users with multiple services through a central identity provider (Authentik).
-- 
+- **ACME** : 
