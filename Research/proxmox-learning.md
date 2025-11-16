@@ -93,6 +93,15 @@ Backup options
 
 --- 
 
+## Enable PCI passthrough
+To virtualise effective hardware to a VM like a network card, GPU, USB-controller. Instead of an emulation, the VM will see the actual hardware. 
+This is done by IOMMU (Intel VT-d or AMD-Vi) who regulate the isolation and mapping off hardware to VM's
+Usefull for better performance, special hardware for gaming/AI-workloads, USB-dongles and network cards for firewalls.
+Only possible when activated through BIOS/UEFI and supported by CPU. 
+
+Not really needed in my case here.
+
+--- 
 
 ### Other settings
 - Enable notifications: "datacenter" -> "notifications"
