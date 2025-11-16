@@ -1,6 +1,13 @@
 # Proxmox Learning
 Some notes about Proxmox installing and setup
 
+## Questions that come up
+- How to remote connect to Proxmox (only LAN)?
+- Setup security (Hardening, auto-updates, ... )
+- Certificates (self-signed)
+- Setup backups for Proxmox itself and all the running VM's
+- 
+
 ## Tips about settings
 ### Configure Updates
 Setup the repositories correctly to get the newest (security) updates
