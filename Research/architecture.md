@@ -69,13 +69,9 @@ I will setup a reverse proxy as an extra security step in my homelab. All VM's w
 - [Traefik](https://traefik.io/traefik) : Modern reverse proxy with service discovery and health checks
 - [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy) : Modern webserver/reverse proxy with Let's encrypt built in
 
----
+For now added Caddy as reverse Proxy.
 
-## Software to check
-- [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
-- [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
-- [Portainer Business](https://www.portainer.io/) or [Portainer CE](https://github.com/portainer/portainer) : Business is free for max 5 nodes, CE is always free but no SSO via OIDC
-- [OpenObserve](https://github.com/openobserve/openobserve) : For monitoring servers (Link with Authentik with [Dex](https://github.com/dexidp/dex) as SSO-bridge)
+---
 
 ## Domain Names & Dynamic DNS providers
 Domain names:
@@ -101,6 +97,14 @@ Dynamic DNS:
 Online services for certificates:
 I've looked for a European alternative for free certificate management but as for now, there are none!
 [Let's Encrypt](https://letsencrypt.org/) : Free best known service, thrusted world-wide
+
+---
+
+## Software to check
+- [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
+- [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
+- [Portainer Business](https://www.portainer.io/) or [Portainer CE](https://github.com/portainer/portainer) : Business is free for max 5 nodes, CE is always free but no SSO via OIDC
+- [OpenObserve](https://github.com/openobserve/openobserve) : For monitoring servers (Link with Authentik with [Dex](https://github.com/dexidp/dex) as SSO-bridge)
 
 ---
 
