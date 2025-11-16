@@ -24,9 +24,11 @@ Some information on how to setup the DNS-server. I still need to research wich s
 - My Asus Zenwifi will distribute the DNS-server to the LAN-clients
 
 ### Possible software
-- [AdGuard Home Github](https://github.com/AdguardTeam/AdGuardHome)
-- [Pi‑hole / Unbound](https://docs.pi-hole.net/)
-- [CoreDNS](https://coredns.io/)
+All open-source (free) and ACME compatible (renewing certificates)
+- [AdGuard Home Github](https://github.com/AdguardTeam/AdGuardHome) : More modern UI, more options but heavier
+- [Pi‑hole / Unbound](https://docs.pi-hole.net/) : Lightweight with Web-UI. Primarly focus on adblocking
+- [CoreDNS](https://coredns.io/) : 
+- [technitium](https://technitium.com/dns/) : Full DNS-server with modern UI, support for DNSSEC, DoH/DoT and caching. More control then Pi-hole but also lightweight.
 
 ### Flow example
 An example how Proxmox will renew it's internal certificate through ACME
@@ -89,10 +91,13 @@ Pricing are not really clear presented. At Easyhost it is shown €0,49 but then
 - [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
 
 ### Certificate Management
-- Let's encrypt for services that will be exposed to the internet like a VPN and Authentik
 - Step CA for the internal-only services like Cockpit for server management.
 - Step CA uses also ACME for automatic renewal off certificates wite Step CLI agent. Step CA is a ACME server.
-- 
+- Online for services that will be exposed to the internet like a VPN and Authentik
+
+Online services for certificates:
+I've looked for a European alternative for free certificate management but as for now, there are none!
+[Let's Encrypt](https://letsencrypt.org/) : Free best known service, thrusted world-wide
 
 ---
 
@@ -105,4 +110,6 @@ https://cockpit-project.org/guide/latest/authentication
 
 ## Some Keywords to Remember
 - **SAML** : Security Assertion Markup Language - Open standard for Single Sign-On (SSO) and identity federation. Used to authenticate multiple users with multiple services through a central identity provider (Authentik).
-- **ACME** : 
+- **ACME** :
+
+
