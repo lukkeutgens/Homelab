@@ -67,7 +67,7 @@ My setup for now:
 - External SSD (ext4) for weekly full backups. Safer because ZFS does not like I/O errors which could happen with an USB-drive.
 - NAS (LAN) for daily snapshots
 
-Format external SSD to `ext4`
+Format external SSD to `ext4`:
 Connect to Slimbook and then with a console:
 ```bash
 lsblk                           # Check which device ex.: /dev/sdb
