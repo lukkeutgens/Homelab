@@ -83,6 +83,7 @@ mount /dev/sdb /mnt/backupssd   # Mount the disk to the directory
 Backing up everything is VERY IMPORTANT!
 - Setup with notifications.
 - Setup retention, no need to keep the older ones
+- Setup retention to limit amount off backups
 - 
 
 Backup options
