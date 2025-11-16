@@ -16,7 +16,7 @@
 
 ## DNS-Server
 Some information on how to setup the DNS-server. I still need to research wich service I will use.
-A good DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
+- DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
 - This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
 - The DNS-server must be in my local LAN and NOT behind the reverse proxy
 
