@@ -60,6 +60,16 @@ Users are linked to realms in Proxmox. Pam-users are root users, so use this as 
 - Users created under the Realm **Linux PAM standard authentication** are NOT added to the Linux user system (Debian).
 - If you go into the Linux Shell from Proxmox, you are automatically logged in as **root@servername**.
 - Adding users in a realm will not add users directly to that realm itself, it will only create those users in Proxmox. You will have to create them also in the realm itself. So when yoy add a Linux PAM user, you will have to create that user also on the Linux system itself.
+- You can use 2FA (Two Factor Authentication) in Proxmox.
+- **Pools** are used to group access to VM's, storage and setup the roles for what to do on them. So you can add a user to a pool instead off setting up all the permissions for each users.
+- A VM can only be assigned to one pool.
+- In **Roles** you setup the rights a user will have, what he/she should be able to do. You can also create your own roles. For example a user can see the VM's console, but not be able to stop it.
+- Directly under **Permissions** you can link everything together. A permission exists out of:
+  - **Path/Resource** : Link with the resource, for example a VM, or a created Pool.
+  - **User/Group** : Link with the user or user-group.
+  - **Role** : The assigned role
+
+ 
 
  
 
