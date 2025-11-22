@@ -4,8 +4,14 @@ Documenting my steps after first booting and installing Proxmox on my Slimbook O
 ## Install steps
 Installing is actually very easy. I used the graphical installer.
 1. Accept the licence blabla
-2. Enter password and email adress
-3. Setup the network interface. Be aware, you need a full domain name. For example: pve.homelab.local
+2. Setup hard-drive settings
+3. Enter password and email adress
+4. Setup the network interface. Be aware, you need a full domain name. For example: pve.homelab.local
+5. Let installer do it's thing
+
+After installation you can login using the user `root` with the set password:
+- On server console to login to Debian Host OS
+- With a web browser to the internet adress + port 8006. For example: https://192.168.0.150:8006
 
 ## Post install steps
 
