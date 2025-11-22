@@ -20,5 +20,8 @@ Steps to take after the first installation
 I don't have an enterprise subscription so I need to change the repositories to get the latest updates.
 This is found under: `Datacenter -> node -> Updates -> Repositories`.
 Disable the following repositories:
-- https://enterprise.poxmox.com/debian/ceph-squid
-- https://enterprise.proxmox.com/deboan/pve
+- `https://enterprise.poxmox.com/debian/ceph-squid`
+- `https://enterprise.proxmox.com/deboan/pve`
+
+Add the following repositorie:
+- 
