@@ -2,11 +2,11 @@
 An overview off my homelab architecture.
 It's a work in progress and I will update everything as I proceed.
 
+
 ---
 
 ## 1. Domains and Certificates
-Separation between internal and external domains. All public services will run behind a reverse proxy and get my public domain name, all other services that will not be accessable will sit in the homelab.local domain.
-
+Separation between internal and external domains. 
 > public.net is just a placeholder for my real domain name, which I'm not documenting on GitHub.
 
 | Domain         | Scope            | Cert Source      | Managed By         |
@@ -41,11 +41,11 @@ For lightweight services such as DNS and management tools.
 Used virtual machines in the homelab
 > I still need to set these up
 
-| VM Name        | Role/Service           | FQDN                | IP Address      | Cert Source      | Notes                           |
-| :---           | :---                   | :---                | :---            | :---             | :---                            |
-| proxy01        | Reverse Proxy (Caddy)  | proxy01.public.net  | 10.0.0.10       | Let's Encrypt    | Entry point for public services |
-| ca01           | Step CA                | ca01.homelab.local  | 10.0.0.11       | Step CA          | Internal PKI                    |
-| auth01         | Authentik AIM          | auth01.public.net   | 10.0.0.12       | Let's Encrypt    | Public login service            |
+| VM Name    | Role/Service           | FQDN                | IP Address      | Cert Source      | Notes                           |
+| :---       | :---                   | :---                | :---            | :---             | :---                            |
+| proxy01    | Reverse Proxy (Caddy)  | proxy01.public.net  | 10.0.0.10       | Let's Encrypt    | Entry point for public services |
+| ca01       | Step CA                | ca01.homelab.local  | 10.0.0.11       | Step CA          | Internal PKI                    |
+| auth01     | Authentik AIM          | auth01.public.net   | 10.0.0.12       | Let's Encrypt    | Public login service            |
 
 ---
 
