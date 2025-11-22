@@ -11,7 +11,7 @@ My physical devices (modem, gateway, hypervisor, NAS, etc.).
 | ISP Fiber Modem          | Internet uplink         | n/a             | Bridge mode / passthrough       |
 | Asus ZenWifi BQ16        | Gateway, DHCP, WiFi     | 192.168.50.1    | Firewall, AIProtection          |
 | Slimbook One mini-pc     | Proxmox Hypervisor      | 192.168.50.157  | Main node (pve01.homelab.local) |
-| Synology NAS             | Storage                 | 192.168.50.149  | Daily incremtal backups         |
+| Synology NAS             | Storage                 | 192.168.50.149  | Daily snapshots                 |
 | Kingston XS2000 4TB SSD  | Storage (External SSD)  | n/a             | Weekly full backups             |
 
 ---
