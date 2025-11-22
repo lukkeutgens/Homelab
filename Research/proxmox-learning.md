@@ -68,7 +68,7 @@ Users are linked to realms in Proxmox. Pam-users are root users, so use this as 
   - **Path/Resource** : Link with the resource, for example a VM, or a created Pool.
   - **User/Group** : Link with the user or user-group.
   - **Role** : The assigned role
-- If user needs access to the Proxmox node/server shell (Debian) it needs to be added to the PAM Realm and as said before, created on that Linux server.
+- If user needs access to the Proxmox node/server shell (Debian) it needs to be added to the PAM Realm and as said before, also be added in the Debian OS itself.
 
  
 
