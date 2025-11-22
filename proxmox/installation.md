@@ -25,7 +25,7 @@ Change the repositories:
 - Add the `No subscription` repository: `http://download.proxmox.com/debian/pve`
 
 Update the Proxmox server:
-1. Go back to Updates and then above you can click `refresh`. Proxmox will then read the new repositories for updates.
+1. Go back to Updates and then above you can click `refresh`. Proxmox will check the repositories for updates.
 2. When done click `>... Upgrade` and a console will open to update the full Proxmox node. Sometimes you will need to reboot. Close the console and reboot from the Proxmox-UI.
 
 
