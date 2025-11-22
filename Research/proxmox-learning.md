@@ -50,7 +50,7 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible. Setup normal Proxmox users with the necessary permissions they need. Also link them with an AIM-service (Access & Identity Management) for best practices.
 
 ### Notes from Tutorials
-- Standard there are 2 Realms (A realm is a security domain to separete users across systems):
+- Standard there are 2 Realms (A realm is a security domain to seperate users across systems):
   - **Linux PAM (Plug-in Authentication Module) standard authentication** : Linux login and authentication system. PAM is not synced across clusters. The default root user sits in PAM. Passwords need to be locally managed on these systems.
   - **Proxmox VE authentication server** : Proxmox own login system. Works best if you have multiple Proxmox systems because it's synced across clusters.
 - You can add the following realms to Proxmox:
