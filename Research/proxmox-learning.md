@@ -59,7 +59,7 @@ Users are linked to realms in Proxmox. Pam-users are root users, so use this as 
   - **OpenID Connect Server**: OpenID Connect (OIDC) is an authentication protocol built on top of the OAuth 2.0 framework that verifies user identities for access to protected endpoints. 
 - Users created under the Realm **Linux PAM standard authentication** are NOT added to the Linux user system (Debian).
 - If you go into the Linux Shell from Proxmox, you are automatically logged in as **root@servername**.
-- Adding users in a realm will not add users directly to that realm itself, it will only create that user in Proxmox. You will have to create the user also in that realm itself. So when yoy add a Linux PAM user, you will have to create that user also on the Linux system itself.
+- Adding users in a realm will not add users directly to that realm itself, it will only create those users in Proxmox. You will have to create them also in the realm itself. So when yoy add a Linux PAM user, you will have to create that user also on the Linux system itself.
 
  
 
