@@ -21,7 +21,8 @@ Set up the repositories correctly to receive the latest security updates:
 --- 
 
 ## Trusted TLS Certificates
-[Proxmox Wiki Certificate Management](https://pve.proxmox.com/wiki/Certificate_Management)
+Official Docs: [Proxmox Wiki Certificate Management](https://pve.proxmox.com/wiki/Certificate_Management)
+Tutorial: [Proxmox VE Made Easy – Complete Training Series (Part 9 - User Management)](https://www.youtube.com/watch?v=frnILOGmATs)
 
 I plan to use ACME, but first I need to install a DNS server container as well as VMs with a reverse proxy and Step CA.  
 For now, I will use a self-signed certificate because Proxmox will either be accessible through the internet or placed behind a VPN. In the end, I may not actually need direct internet access.
