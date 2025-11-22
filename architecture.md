@@ -19,7 +19,7 @@ My physical devices (modem, gateway, hypervisor, NAS, etc.).
 ## 2. Containers
 > I still need to set these up
 
-| Name          | Role/Service    | FQDN                 | IP Address      | Cert. Source    | Notes                 |
+| Name          | Role/Service    | FQDN                 | IP Address      | Cert Source    | Notes                 |
 | :---          | :---            | :---                 | :---            | :---            | :---                  |
 | dns01         | Technitium DNS  | dns01.homelab.local  | 192.168.50.xxx  | Step CA         | Internal DNS resolver |
 
@@ -51,11 +51,11 @@ My physical devices (modem, gateway, hypervisor, NAS, etc.).
 ## 5. Network
 Basically there is the local LAN-network regulated by the Asus ZenWifi, and there is the proxy subnet where all services from the homelab will run except Proxmox and the DNS server.
 
-| Segment        | CIDR             | Gateway        | DNS             | Notes                                      |
-| :---           | :---             | :---           | :---            | :---                                       |
-| LAN            | 192.168.50.0/24  | 192.168.50.1   |                 | DHCP By Asus ZenWifi                       |
-| Proxy subnet   | 10.0.0.0/24      | 192.168.50.1   |                 | All services behind reverse proxy          |
-| Internet       | ISP Uplink       | Fiber modem    |                 | AIProtection & Firewall active on gateway  |
+| Segment        | CIDR             | Gateway        | Notes                                      |
+| :---           | :---             | :---           | :---                                       |
+| LAN            | 192.168.50.0/24  | 192.168.50.1   | DHCP By Asus ZenWifi                       |
+| Proxy subnet   | 10.0.0.0/24      | 192.168.50.1   | all web traffic in 10.0.0.x is routed through proxy01 for TLS termination. |
+| Internet       | ISP Uplink       | Fiber modem    | AIProtection & Firewall active on gateway  |
 
 ---
 
