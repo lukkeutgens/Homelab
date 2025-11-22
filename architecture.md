@@ -1,7 +1,5 @@
-# Homelab Architecure
-An overview off my homelab architecture.
-It's a work in progress and I will update everything as I proceed.
-
+# Homelab Architecture
+An overview of my homelab architecture. This document is a work in progress and will be updated as the setup evolves.
 
 ---
 
@@ -10,24 +8,24 @@ My physical devices (modem, gateway, hypervisor, NAS, etc.).
 
 | Device                | Role/Function        | IP Address      | Notes                           |
 | :---                  | :---                 | :---            | :---                            |
-| ISP Fiber Modem       | Internet uplink      | n/a             | Brigde mode / passthrough       |
+| ISP Fiber Modem       | Internet uplink      | n/a             | Bridge mode / passthrough       |
 | Asus ZenWifi BQ16     | Gateway, DHCP, WiFi  | 192.168.50.1    | Firewall, AIProtection          |
-| Slimbook One mini-pc  | Proxmox Hypervisor   | 192.168.50.157  | Main node (pve01.homelab.local  |
+| Slimbook One mini-pc  | Proxmox Hypervisor   | 192.168.50.157  | Main node (pve01.homelab.local) |
 
 ---
 
 ## 2. Containers
-For lightweight services such as DNS and management tools.
 > I still need to set these up
 
 | Name          | Role/Service    | FQDN                 | IP Address      | Cert. Source    | Notes                 |
 | :---          | :---            | :---                 | :---            | :---            | :---                  |
 | dns01         | Technitium DNS  | dns01.homelab.local  | 192.168.50.xxx  | Step CA         | Internal DNS resolver |
 
+> Note: DNS is not behind the reverse proxy, because DNS queries do not use HTTP/HTTPS but their own protocols (UDP/TCP port 53). Only the web interface could be proxied, not the resolver itself.
+
 ---
 
 ## 3. Virtual Machines
-Used virtual machines in the homelab
 > I still need to set these up
 
 | VM Name    | Role/Service           | FQDN                | IP Address      | Cert Source      | Notes                           |
@@ -39,7 +37,6 @@ Used virtual machines in the homelab
 ---
 
 ## 4. Domains and Certificates
-Separation between internal and external domains. 
 > public.net is just a placeholder for my real domain name, which I'm not documenting on GitHub.
 
 | Domain         | Scope            | Cert Source      | Managed By         |
@@ -55,7 +52,7 @@ Basically there is the local LAN-network regulated by the Asus ZenWifi, and ther
 | Segment        | CIDR             | Gateway        | DNS             | Notes                                      |
 | :---           | :---             | :---           | :---            | :---                                       |
 | LAN            | 192.168.50.0/24  | 192.168.50.1   |                 | DHCP By Asus ZenWifi                       |
-| Proxy subnet   | 10.0.0.0/24      | proxy01        |                 | All services behind reverse proxy          |
+| Proxy subnet   | 10.0.0.0/24      | 192.168.50.1   |                 | All services behind reverse proxy          |
 | Internet       | ISP Uplink       | Fiber modem    |                 | AIProtection & Firewall active on gateway  |
 
 ---
