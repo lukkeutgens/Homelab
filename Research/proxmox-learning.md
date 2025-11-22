@@ -50,7 +50,13 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible. Setup normal Proxmox users with the necessary permissions they need. Also link them with an AIM-service (Access & Identity Management) for best practices.
 
 ### Notes from Tutorials
-- Standard there are 2 Realms: `Linux PAM standard authentication` and `Proxmox VE authentication server`.
+- Standard there are 2 Realms:
+  - `Linux PAM (Plug-in Authentication Module) standard authentication` : Linux login and authentication system. PAM is not synec across clusters. The default root user sits in PAM. Passwords need to be locally managed on these systems.
+  - `Proxmox VE authentication server` : Proxmox own login system. Works best if you have multiple Proxmox systems because it's synced across clusters.
+- You can add the following realms to Proxmox:
+  - `Active Directory Server` : User management system from Microsoft Windows
+  - `LDAP Server` : Lightweight Directory Access Protocol like OpenLDAP.
+  - `OpenID Connect Server`: OpenID Connect (OIDC) is an authentication protocol built on top of the OAuth 2.0 framework that verifies user identities for access to protected endpoints. 
 - Users created under the Realm `Linux PAM standard authentication` are NOT added to the Linux user system (Debian).
 - If you go into the Linux Shell from Proxmox, you are automatically logged in as `root@servername`.
 
