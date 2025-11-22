@@ -21,8 +21,7 @@ Set up the repositories correctly to receive the latest security updates:
 --- 
 
 ## Trusted TLS Certificates
-Official Docs: [Proxmox Wiki Certificate Management](https://pve.proxmox.com/wiki/Certificate_Management)
-Tutorial: [Proxmox VE Made Easy – Complete Training Series (Part 9 - User Management)](https://www.youtube.com/watch?v=frnILOGmATs)
+Proxmox Wiki: [Proxmox Wiki Certificate Management](https://pve.proxmox.com/wiki/Certificate_Management)
 
 I plan to use ACME, but first I need to install a DNS server container as well as VMs with a reverse proxy and Step CA.  
 For now, I will use a self-signed certificate because Proxmox will either be accessible through the internet or placed behind a VPN. In the end, I may not actually need direct internet access.
@@ -43,8 +42,9 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 
 --- 
 
- ## User Management
- [Proxmox User Management](https://pve.proxmox.com/wiki/User_Management)
+## User Management
+Proxmox Wiki: [Proxmox User Management](https://pve.proxmox.com/wiki/User_Management)
+Tutorial: [Proxmox VE Made Easy – Complete Training Series (Part 9 - User Management)](https://www.youtube.com/watch?v=frnILOGmATs)
  
 Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible. Setup normal Proxmox users with the necessary permissions they need. Also link them with an AIM-service (Access & Identity Management) for best practices.
 
