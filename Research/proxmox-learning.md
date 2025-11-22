@@ -42,6 +42,12 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 
 --- 
 
+ ## User Management
+ How to setup users in Proxmox in a secure way?
+ 
+
+---
+
 ## Storage
 - Slimbook One mini-PC with a 1TB SSD to run Proxmox.
 - External USB-C Kingston 4TB SSD for additional cold storage.
@@ -64,7 +70,7 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 - **LVM-thin**: Lightweight, less overhead but fewer features. Suitable when ZFS is not required.
 
 ### My Planned Setup
-- Slimbook 1TB SSD (ZFS) for active VM disks.
+- Slimbook 1TB SSD (ZFS or LVM-thin?) for active VM disks.
 - External SSD (ext4) for weekly full backups. Safer because ZFS does not handle I/O errors well, which can occur with USB drives.
 - NAS (LAN) for daily snapshots.
 
