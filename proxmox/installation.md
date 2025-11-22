@@ -14,4 +14,10 @@ After installation you can login using the user `root` with the set password:
 - With a web browser to the internet adress + port 8006. For example: https://192.168.0.150:8006
 
 ## Post install steps
+Steps to take after the first installation
+
+### 1. Repositories
+I don't have an enterprise subscription so I need to change the repositories to get the latest updates.
+This is found under `Datacenter -> node -> Updates -> Repositories`
+
 
