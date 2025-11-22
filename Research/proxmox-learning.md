@@ -63,7 +63,7 @@ Users are linked to realms in Proxmox. Pam-users are root users, so use this as 
 - You can use 2FA (Two Factor Authentication) in Proxmox.
 - **Pools** are used to group access to VM's, storage and setup the roles for what to do on them. So you can add a user to a pool instead off setting up all the permissions for each users.
 - A VM can only be assigned to one pool.
-- In **Roles** you setup the rights a user will have, what he/she should be able to do. You can also create your own roles. For example a user can see the VM's console, but not be able to stop it.
+- In **Roles** you setup the rights a user will have, what he/she should be able to do. You can also create your own roles. For example a user can see the VM's console, but not be able to stop it. There are already many default roles, but you can create new ones if none off the default ones can give the actual collection off rights you want to give a user.
 - Directly under **Permissions** you can link everything together. A permission exists out of:
   - **Path/Resource** : Link with the resource, for example a VM, or a created Pool.
   - **User/Group** : Link with the user or user-group.
