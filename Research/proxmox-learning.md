@@ -44,35 +44,30 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 
 ## User Management
 - Proxmox Wiki: [Proxmox User Management](https://pve.proxmox.com/wiki/User_Management)
-- Tutorial: [Proxmox VE Made Easy – Complete Training Series (Part 9 - User Management)](https://www.youtube.com/watch?v=frnILOGmATs) 
 - Tutorial: [How to create users and set permissions in Proxmox](https://www.youtube.com/watch?v=DLh_j1CAj44)
 
-Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible. Setup normal Proxmox users with the necessary permissions they need. Also link them with an AIM-service (Access & Identity Management) for best practices.
+Users in Proxmox are linked to **realms**. PAM users include the root account, so use this as little as possible. Instead, create normal Proxmox users with only the permissions they need. For best practices, integrate with an AIM service (Access & Identity Management).
 
 ### Notes from Tutorials
-- Standard there are 2 Realms (A realm is a security domain to seperate users across systems):
-  - **Linux PAM (Plug-in Authentication Module) standard authentication** : Linux login and authentication system. PAM is not synced across clusters. The default root user sits in PAM. Passwords need to be locally managed on these systems.
-  - **Proxmox VE authentication server** : Proxmox own login system. Works best if you have multiple Proxmox systems because it's synced across clusters.
+- By default there are 2 realms (a realm is a security domain to separate users across systems):
+  - **Linux PAM (Pluggable Authentication Module)**: Linux login and authentication system. PAM is not synced across clusters. The default root user resides in PAM. Passwords must be managed locally on each system.
+  - **Proxmox VE authentication server**: Proxmox’s own login system. Works best if you have multiple Proxmox nodes because it is synced across the cluster.
 - You can add the following realms to Proxmox:
-  - **Active Directory Server** : User management system from Microsoft Windows
-  - **LDAP Server** : Lightweight Directory Access Protocol like OpenLDAP.
-  - **OpenID Connect Server**: OpenID Connect (OIDC) is an authentication protocol built on top of the OAuth 2.0 framework that verifies user identities for access to protected endpoints. 
-- Users created under the Realm **Linux PAM standard authentication** are NOT added to the Linux user system (Debian).
-- If you go into the Linux Shell from Proxmox, you are automatically logged in as **root@servername**.
-- Adding users in a realm will not add users directly to that realm itself, it will only create those users in Proxmox. You will have to create them also in the realm itself. So when yoy add a Linux PAM user, you will have to create that user also on the Linux system itself.
-- You can use 2FA (Two Factor Authentication) in Proxmox.
-- **Pools** are used to group access to VM's, storage and setup the roles for what to do on them. So you can add a user to a pool instead off setting up all the permissions for each users.
-- A VM can only be assigned to one pool.
-- **Roles** are the collection off rights what a user or group is allowed to do. There are already many default roles in Proxmox, but if none of them has the rights you want, you can create your own roles. You can select multiple rights under a role.
-- Directly under **Permissions** you can link everything together. A permission exists out of:
-  - **Path/Resource** : Link with the resource, for example a VM, or a created Pool.
-  - **User/Group** : Link with the user or user-group.
-  - **Role** : The assigned role
-- If user needs access to the Proxmox node/server shell (Debian) it needs to be added to the PAM Realm and as said before, also be added in the Debian OS itself.
-
- 
-
- 
+  - **Active Directory Server**: User management system from Microsoft Windows.
+  - **LDAP Server**: Lightweight Directory Access Protocol, e.g. OpenLDAP.
+  - **OpenID Connect Server**: OIDC is an authentication protocol built on top of OAuth 2.0 that verifies user identities for access to protected endpoints.
+- Users created under the **Linux PAM authentication** realm are NOT automatically added to the Linux user system (Debian).
+- If you open the Linux shell from Proxmox, you are automatically logged in as **root@servername**.
+- Adding users in a realm does not automatically create them in that realm itself. It only registers them in Proxmox. You must also create the user in the external realm. For example, when you add a Linux PAM user in Proxmox, you must also create that user in the Debian OS.
+- You can enable **2FA (Two-Factor Authentication)** in Proxmox.
+- **Pools** are used to group access to VMs, storage, and roles. This way you can add a user to a pool instead of configuring permissions individually for each user.
+- A VM can only belong to one pool.
+- **Roles** are collections of rights that define what a user or group is allowed to do. Proxmox provides many default roles, but you can also create custom roles if none of the defaults fit your needs. Multiple rights can be combined under a role.
+- Under **Permissions** you link everything together. A permission consists of:
+  - **Path/Resource**: The resource, e.g. a VM or a pool.
+  - **User/Group**: The user or group to assign.
+  - **Role**: The role that defines the allowed actions.
+- If a user needs access to the Proxmox node/server shell (Debian), they must be added to the PAM realm and also created in the Debian OS itself.
 
 ---
 
