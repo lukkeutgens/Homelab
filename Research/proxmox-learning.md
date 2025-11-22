@@ -45,7 +45,7 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
  ## User Management
  [Proxmox User Management](https://pve.proxmox.com/wiki/User_Management)
  
-Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible.
+Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible. Setup normal Proxmox users with the necessary permissions they need. Also link them with an AIM-service (Access & Identity Management) for best practices.
 
  
 
