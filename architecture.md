@@ -5,17 +5,6 @@ It's a work in progress and I will update everything as I proceed.
 
 ---
 
-## 1. Domains and Certificates
-Separation between internal and external domains. 
-> public.net is just a placeholder for my real domain name, which I'm not documenting on GitHub.
-
-| Domain         | Scope            | Cert Source      | Managed By         |
-| :---           | :---             | :---             | :---               | 
-| homelab.local  | Internal only    | Step CA          | Technitium DNS     |
-| public.net     | Public services  | Let's Encrypt    | Registrar + Caddy  | 
-
----
-
 ## 1. Physical Infrastructure
 My physical devices (modem, gateway, hypervisor, NAS, etc.).
 
@@ -48,4 +37,27 @@ Used virtual machines in the homelab
 | auth01     | Authentik AIM          | auth01.public.net   | 10.0.0.12       | Let's Encrypt    | Public login service            |
 
 ---
+
+## 4. Domains and Certificates
+Separation between internal and external domains. 
+> public.net is just a placeholder for my real domain name, which I'm not documenting on GitHub.
+
+| Domain         | Scope            | Cert Source      | Managed By         |
+| :---           | :---             | :---             | :---               | 
+| homelab.local  | Internal only    | Step CA          | Technitium DNS     |
+| public.net     | Public services  | Let's Encrypt    | Registrar + Caddy  | 
+
+---
+
+## 5. Network
+Basically there is the local LAN-network regulated by the Asus ZenWifi, and there is the proxy subnet where all services from the homelab will run except Proxmox and the DNS server.
+
+| Segment        | CIDR             | Gateway        | DNS             | Notes                                      |
+| :---           | :---             | :---           | :---            | :---                                       |
+| LAN            | 192.168.50.0/24  | 192.168.50.1   |                 | DHCP By Asus ZenWifi                       |
+| Proxy subnet   | 10.0.0.0/24      | proxy01        |                 | All services behind reverse proxy          |
+| Internet       | ISP Uplink       | Fiber modem    |                 | AIProtection & Firewall active on gateway  |
+
+---
+
 
