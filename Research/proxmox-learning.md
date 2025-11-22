@@ -43,10 +43,16 @@ For now, I will use a self-signed certificate because Proxmox will either be acc
 --- 
 
 ## User Management
-Proxmox Wiki: [Proxmox User Management](https://pve.proxmox.com/wiki/User_Management)
-Tutorial: [Proxmox VE Made Easy – Complete Training Series (Part 9 - User Management)](https://www.youtube.com/watch?v=frnILOGmATs)
- 
+- Proxmox Wiki: [Proxmox User Management](https://pve.proxmox.com/wiki/User_Management)
+- Tutorial: [Proxmox VE Made Easy – Complete Training Series (Part 9 - User Management)](https://www.youtube.com/watch?v=frnILOGmATs) 
+- Tutorial: [How to create users and set permissions in Proxmox](https://www.youtube.com/watch?v=DLh_j1CAj44)
+
 Users are linked to realms in Proxmox. Pam-users are root users, so use this as little as possible. Setup normal Proxmox users with the necessary permissions they need. Also link them with an AIM-service (Access & Identity Management) for best practices.
+
+### Notes from Tutorials
+- Standard there are 2 Realms: `Linux PAM standard authentication` and `Proxmox VE authentication server`.
+- Users created under the Realm `Linux PAM standard authentication` are NOT added to the Linux user system (Debian).
+- If you go into the Linux Shell from Proxmox, you are automatically logged in as `root@servername`.
 
  
 
