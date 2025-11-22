@@ -17,10 +17,9 @@ After installation you can login using the user `root` with the set password:
 Steps to take after the first installation
 
 ### 1. Repositories & Update
-I don't have an enterprise subscription so I need to change the repositories to get the latest updates.
+I don't have an enterprise subscription so I need to change the repositories to get the latest updates. These are found under: `Datacenter -> node -> Updates -> Repositories`.
 
-These are found under: `Datacenter -> node -> Updates -> Repositories`.
-Change the repositories
+Change the repositories:
 - Disable `https://enterprise.poxmox.com/debian/ceph-squid`
 - Disable `https://enterprise.proxmox.com/deboan/pve`
 - Add the **No subscription** repository `http://download.proxmox.com/debian/pve`
