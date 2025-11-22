@@ -1,5 +1,6 @@
 # Homelab Architecure
 An overview off my homelab architecture.
+It's a work in progress and I will update everything as I proceed.
 
 ---
 
@@ -38,7 +39,7 @@ Used virtual machines in the homelab
 
 ## 4. Domains and Certificates
 Separation between internal and external domains.
-> public.net is just a placeholder for my real domain name, which I'm not putting on GitHub.
+> public.net is just a placeholder for my real domain name, which I'm not documenting on GitHub.
 
 | Domain         | Scope            | Cert Source      | Managed By         |
 | :---           | :---             | :---             | :---               | 
