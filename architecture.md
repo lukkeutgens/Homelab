@@ -30,11 +30,11 @@ My physical devices (modem, gateway, hypervisor, NAS, etc.).
 ## 3. Virtual Machines
 > I still need to set these up
 
-| VM Name    | Role/Service           | FQDN                | IP Address      | Cert Source      | Notes                           |
-| :---       | :---                   | :---                | :---            | :---             | :---                            |
-| proxy01    | Reverse Proxy (Caddy)  | proxy01.public.net  | 10.0.0.10       | Let's Encrypt    | Entry point for public services |
-| ca01       | Step CA                | ca01.homelab.local  | 10.0.0.11       | Step CA          | Internal PKI                    |
-| auth01     | Authentik AIM          | auth01.public.net   | 10.0.0.12       | Let's Encrypt    | Public login service            |
+| VM Name    | Role/Service           | FQDN                | IP Address      | Cert Source      | Notes                            |
+| :---       | :---                   | :---                | :---            | :---             | :---                             |
+| proxy01    | Reverse Proxy (Caddy)  | proxy01.public.net  | 10.0.0.10       | Let's Encrypt    | Entry point for homelab services |
+| ca01       | Step CA                | ca01.homelab.local  | 10.0.0.11       | Step CA          | Internal PKI                     |
+| auth01     | Authentik AIM          | auth01.public.net   | 10.0.0.12       | Let's Encrypt    | Public authentication service    |
 
 ---
 
