@@ -80,6 +80,10 @@ The other space left (~2TB) will for now be used to backup full VM's with **vzdu
   
 3. Accept settings and storage is ready for use in Proxmox
 
+---
+
+
+
 
 
 
