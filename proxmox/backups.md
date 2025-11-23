@@ -6,10 +6,8 @@ My Slimbook One mini‑PC currently has a 1TB internal SSD (set up by the Proxmo
 - I also own a Synology NAS DS420+, but for now I leave it out of scope.
 
 ## Prepare External SSD
-> ⚠️ Note: The external SSD is not recognised by Linux immediately after a reboot. To avoid boot issues, I configure /etc/fstab with safe options (nofail, x-systemd.automount) so Proxmox can boot even if the drive is not connected. When connected, the SSD is attached automatically after a short delay.
-> I also made a change in the Slimbook BIOS settings under USB devices: Changed Device power‑up delay from Auto to 20 seconds
-
-
+> ⚠️ Note: The external SSD is not detected by Linux immediately after a reboot. To prevent boot issues, I configured `/etc/fstab` with safe options (`nofail`, `x-systemd.automount`) so Proxmox can start even if the drive is not connected. When the SSD is connected, it is mounted automatically after a short delay.
+> Additionally, I adjusted the Slimbook BIOS settings under USB devices: changed Device power‑up delay from Auto to 20 seconds to give the SSD enough time to initialise.
 
 Identify the drive:
 ```bash
