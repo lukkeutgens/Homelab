@@ -54,7 +54,7 @@ The other space left (~2TB) will for now be used to backup full VM's with **vzdu
 ## Rescuezilla Full Backup Steps
 Let's take a full backup off the Proxmox server as it is now. 
 1. Download the Rescuezilla installer at their [website](https://rescuezilla.com/download)
-2. Prepare a seperate USB-stick for installing it to (Be aware! The USB-stick will be completely erased)
+2. Get yourself a seperate USB-stick for installing it to (Be aware! The USB-stick will be completely erased)
 3. Download [Rufus](https://rufus.ie/) to write Rescuezilla to the USB-stick
 4. Start Rufus and select the following
     - Device: Select the USB-stick
