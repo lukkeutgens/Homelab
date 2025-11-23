@@ -43,21 +43,21 @@ dmesg | tail -n 20    # Can be used to show the new connected drive and where
 Now we need to format this disk and mount it.
 ```bash
 fdisk /dev/sda           # Start fdisk interactive menu
--> Command: g            # Delete old and create new partition table
+-> Command: g            # Create a new GPT partition table (wipes old one)
 -> Command: n            # Create a new partition
--> Partition number: 1   # Default setting
--> First sector:         # Leave empty en press enter for default sector
--> Last sector:          # Leave empty en press enter for default sector
--> Command: w            # Write to disk and close fdisk interactive menu
+-> Partition number: 1   # Accept default (1)
+-> First sector:         # Leave empty en press enter to accept default (start of disk)
+-> Last sector:          # Leave empty en press enter to accept default (end of disk, full size)
+-> Command: w            # Write changes to disk and exit fdisk
 
-lsblk                    # You should now see the new drive with 1 partition, in my case "sda1"
-mkfs.ext4 /dev/sda1      # Format the partition to EXT4 fileformat
-mkdir /mnt/ssd-backup    # Directory to mount drive sda1 to. We use "/mnt" because it's an external drive.
+lsblk                    # Verify new partition exists, e.g. "sda1"
+mkfs.ext4 /dev/sda1      # Format the partition with EXT4 filesystem
+mkdir /mnt/ssd-backup    # Create mount directory. Convention: use "/mnt" for external/extra storage
 
-echo "/dev/sda1 /mnt/ssd-backup ext4 defaults 0 2" >> /etc/fstab    # Add line to /etc/fstab to automatically mount drive
-mount -a                 # Mount all from the file /ect/fstab -> this will give a warning (hint)
-systemctl daemon-reload  # Reload like the warning said to do
-df -h | grep ssd-backup  # To check if disk is correctly mounted and ready to use
+echo "/dev/sda1 /mnt/ssd-backup ext4 defaults 0 2" >> /etc/fstab    # Add entry to /etc/fstab for automatic mounting at boot
+mount -a                 # Mount all filesystems listed in /etc/fstab (may show a systemd hint)
+systemctl daemon-reload  # Reload systemd configuration as suggested
+df -h | grep ssd-backup  # Verify that the disk is mounted and available
 ```
 
 
