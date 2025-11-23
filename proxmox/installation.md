@@ -66,7 +66,22 @@ df -h | grep ssd-backup  # Verify that the disk is mounted and available
 ```
 
 #### Config External SSD as full VM backup
-I will use the external SSD for full bare-metal backups using 
+I will use the external SSD for full bare-metal backups using Rescuezilla. Probably keep 2x full-backups.
+The other space left (~2TB) will for now be used to backup full VM's with **vzdump** in Proxmox
+
+1. Under `Datacenter -> Storage` choose `Add` to create a new directory
+2. Enter following settings:
+    - ID: ssd-backup
+    - Directory: /mnt/ssd-backup
+    - Content: Backup, ISO image (Yes, I will save the installer ISO's also here)
+    - Nodes: pve01
+    - Enable: Yes
+    - Shared: No (It's an external SSD, so not shared between nodes)
+  
+3. Accept settings and storage is ready for use in Proxmox
+
+
+
 
 
 
