@@ -10,8 +10,8 @@ Installing is actually very easy. I used the graphical installer.
 5. Let the installer do it's thing
 
 After installation you can login using the user `root` with the set password:
-- On server console to login to Debian Host OS
-- With a web browser to the internet adress + port 8006. For example: https://192.168.0.150:8006
+- On the server console you can login into the Debian Host OS
+- Login to Proxmox with a web browser to the internet adress + port 8006. For example: https://192.168.0.150:8006
 
 ## Post install steps
 Steps to take after the first installation
