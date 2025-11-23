@@ -13,6 +13,8 @@ After installation you can login using the user `root` with the set password:
 - On the server console you can login into the Debian Host OS
 - Login to Proxmox with a web browser to the internet adress + port 8006. For example: https://192.168.0.150:8006
 
+---
+
 ## Post install steps
 Steps to take after the first installation
 
@@ -28,11 +30,13 @@ Update the Proxmox server:
 1. Go back to Updates and then above you can click `refresh`. Proxmox will check the repositories for updates.
 2. When done click `>... Upgrade` and a console will open to update the full Proxmox node. Sometimes you will need to reboot. Close the console and reboot from the Proxmox-UI.
 
+---
+
 ### 2. Storage
 I have an external 4TB SSD which I will use for bare-metal backups.
 > I also have a Synology DS420+ NAS but I'll need to buy first an extra HD because there is not enough room left
 
-#### Setup External SSD
+#### Prepare External SSD
 After connecting to the Slimbook, see which one it is and format it to EXT4 format. So open the shell from Proxmox:
 ```bash
 lsblk                 # Gives an overview off the drives
@@ -61,7 +65,8 @@ systemctl daemon-reload  # Reload systemd configuration as suggested
 df -h | grep ssd-backup  # Verify that the disk is mounted and available
 ```
 
-
+#### Config External SSD as full VM backup
+I will use the external SSD for full bare-metal backups using 
 
 
 
