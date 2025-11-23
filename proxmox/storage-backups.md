@@ -9,7 +9,7 @@ My Slimbook One mini‑PC currently has a 1TB internal SSD (set up by the Proxmo
 I will use my Kingston XS2000 4TB USB-C SSD as backup for the full VM's. But there are issues, see the warning below.
 
 > ⚠️ Note: The external SSD is not detected by Linux immediately after a reboot. To prevent boot issues, I configured `/etc/fstab` with safe options (`nofail`, `x-systemd.automount`) so Proxmox can start even if the drive is not connected. When the SSD is connected, it is mounted automatically after a short delay.
-> Additionally, I adjusted the Slimbook BIOS settings under USB devices: changed Device power‑up delay from Auto to 20 seconds to give the SSD enough time to initialise.
+> Additionally, I adjusted the Slimbook BIOS settings under USB devices: changed Device power‑up delay from Auto to 30 seconds to give the SSD enough time to initialise. But sometimes it still does not mount automatically.
 
 ### 1.1 Prepare the SSD through the console
 Identify the drive:
