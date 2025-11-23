@@ -1,18 +1,26 @@
 # Storage & Backup Strategy
-My Slimbook One mini-pc has only a 1TB SSD for now which I can expand in the future. For now I also have a fast external 4TB SSD which I will use for my backup strategy. 
-For bare-metall full-backups I will use [Rescuezilla](https://rescuezilla.com/) also to that same external SSD.
-I also have a Synology NAS DS420+ but I'm leaving it out off the picture for now. 
+My Slimbook One mini‑PC currently has a 1TB internal SSD (set up by the Proxmox installer). Additionally, I use a fast external 4TB Kingston XS2000 SSD for backups.
+
+- Bare‑metal full backups → [Rescuezilla](https://rescuezilla.com/) to the external SSD.
+- VM backups → Proxmox to the external SSD.
+- I also own a Synology NAS DS420+, but for now I leave it out of scope.
 
 ## Prepare External SSD
-After connecting to the Slimbook, see which one it is and format it to EXT4 format. So open the shell from Proxmox:
-```bash
-lsblk                 # Gives an overview off the drives
-dmesg | tail -n 20    # Can be used to show the new connected drive and where
-```
-- Slimbooks SSD is called "nvmeOn1" which was setup by the Proxmox installer
-- External SSS is called sda on my system.
+> ⚠️ Note: The external SSD is not recognised by Linux immediately after a reboot. To avoid boot issues, I configure /etc/fstab with safe options (nofail, x-systemd.automount) so Proxmox can boot even if the drive is not connected. When connected, the SSD is attached automatically after a short delay.
+> I also made a change in the Slimbook BIOS settings under USB devices: Changed Device power‑up delay from Auto to 20 seconds
 
-Now we need to format this disk and mount it.
+
+
+Identify the drive:
+```bash
+lsblk                 # Overview of all drives
+dmesg | tail -n 20    # Show kernel messages for newly connected devices
+blkid                 # Lookup UUIDs of partitions
+```
+- Internal Slimbook SSD → nvme0n1 (set up by Proxmox installer)
+- External SSD → sda (with partition sda1)
+
+Partition and format
 ```bash
 fdisk /dev/sda           # Start fdisk interactive menu
 -> Command: g            # Create a new GPT partition table (wipes old one)
@@ -25,11 +33,35 @@ fdisk /dev/sda           # Start fdisk interactive menu
 lsblk                    # Verify new partition exists, e.g. "sda1"
 mkfs.ext4 /dev/sda1      # Format the partition with EXT4 filesystem
 mkdir /mnt/ssd-backup    # Create mount directory. Convention: use "/mnt" for external/extra storage
+```
+Configure fstab
+Lookup the UUID of the external SSD:
+```bash
+blkid /dev/sda1
+```
+Edit /etc/fstab and add:
+```bash
+UUID=052d0156-b8bd-4da3-84a9-b6d092f58fdd /mnt/ssd-backup ext4 defaults,nofail,x-systemd.automount,x-systemd.device-timeout=15 0 2
+```
+Explanation of options
+- UUID=… → stable identifier, independent of /dev/sdX naming
+- /mnt/ssd-backup → mountpoint for external storage
+- ext4 → filesystem type
+- defaults,nofail → system boots even if SSD is missing
+- x-systemd.automount → mount on demand when accessed
+- x-systemd.device-timeout=15 → wait up to 15s for device to appear
+- 0 2 → fsck order (root first, then secondary disks)
 
-echo "/dev/sda1 /mnt/ssd-backup ext4 defaults 0 2" >> /etc/fstab    # Add entry to /etc/fstab for automatic mounting at boot
-mount -a                 # Mount all filesystems listed in /etc/fstab (may show a systemd hint)
-systemctl daemon-reload  # Reload systemd configuration as suggested
-df -h | grep ssd-backup  # Verify that the disk is mounted and available
+Verify
+```bash
+mount -a                 # Mount all filesystems listed in fstab
+systemctl daemon-reload  # Reload systemd configuration
+df -h | grep ssd-backup  # Verify SSD is mounted and available
+```
+After reboot, check again:
+```bash
+lsblk
+df -h
 ```
 
 ---
@@ -53,6 +85,8 @@ The other space left (~2TB) will for now be used to backup full VM's with **vzdu
 
 ## Rescuezilla Full Backup Steps
 Let's take a full backup off the Proxmox server as it is now. 
+
+Prepare a USB-stick with Rescuezilla on:
 1. Download the Rescuezilla installer at their [website](https://rescuezilla.com/download)
 2. Get yourself a seperate USB-stick for installing it to (Be aware! The USB-stick will be completely erased)
 3. Download [Rufus](https://rufus.ie/) to write Rescuezilla to the USB-stick
@@ -67,6 +101,10 @@ Let's take a full backup off the Proxmox server as it is now.
     - Cluster size: 64 KB (default)
 5. When done, you can use the USB-stick to backup a full bare-metall
 
-
+Now take a backup off the Proxmox server:
+1. Shutdown the server
+2. Insert the Rescuezilla USB-stick
+3. Startup the server and go into the boot-menu (F7 for my Slimbook One)
+4. 
 
 
