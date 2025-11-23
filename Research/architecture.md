@@ -110,6 +110,12 @@ To create a full backup from the Proxmox nodes, should everything fail.
 - [FSArchiver](https://www.fsarchiver.org/) : System tool that allows you to save the contents of a file-system to a compressed archive file.
 
 I still need to study these further, but TimeShift and Rescuezilla look very promising.
+- Rescuezilla is installed on a bootable USB-stick, then boot the PC with it, and you can take a full backup to another external HD or something.
+- Timeshift is more a snapshot taker for the Debian config files. It can not be used to restore the complete system. It's more for "oops, I made a config mistake".
+- Clonezilla is the same as Rescuezilla but without the graphical interface.
+- FSArhiver makes archives of a disk partition. Not really for bare-metal restore.
+
+So it will become Rescuezilla on a USB-stick. Optional to make a backup to a NAS.
 
 ---
 
