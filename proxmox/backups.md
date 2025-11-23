@@ -67,7 +67,7 @@ df -h
 
 ---
 
-## 1.2 Add the SSD to Proxmox
+### 1.2 Add the SSD to Proxmox Datacenter Storage
 I will use the external SSD for full bare-metal backups using Rescuezilla. Probably keep 2x full-backups.
 The other space left (~2TB) will for now be used to backup full VM's with **vzdump** in Proxmox
 
