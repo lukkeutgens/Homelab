@@ -5,10 +5,13 @@ My Slimbook One mini‑PC currently has a 1TB internal SSD (set up by the Proxmo
 - VM backups → Proxmox to the external SSD.
 - I also own a Synology NAS DS420+, but for now I leave it out of scope.
 
-## Prepare External SSD
+## 1. External SSD for VM backups
+I will use my Kingston XS2000 4TB USB-C SSD as backup for the full VM's. But there are issues, see the warning below.
+
 > ⚠️ Note: The external SSD is not detected by Linux immediately after a reboot. To prevent boot issues, I configured `/etc/fstab` with safe options (`nofail`, `x-systemd.automount`) so Proxmox can start even if the drive is not connected. When the SSD is connected, it is mounted automatically after a short delay.
 > Additionally, I adjusted the Slimbook BIOS settings under USB devices: changed Device power‑up delay from Auto to 20 seconds to give the SSD enough time to initialise.
 
+### 1.1 Prepare the SSD through the console
 Identify the drive:
 ```bash
 lsblk                 # Overview of all drives
@@ -64,7 +67,7 @@ df -h
 
 ---
 
-## Config External SSD for full VM backups
+## 1.2 Add the SSD to Proxmox
 I will use the external SSD for full bare-metal backups using Rescuezilla. Probably keep 2x full-backups.
 The other space left (~2TB) will for now be used to backup full VM's with **vzdump** in Proxmox
 
@@ -81,9 +84,10 @@ The other space left (~2TB) will for now be used to backup full VM's with **vzdu
 
 ---
 
-## Rescuezilla Full Backup Steps
+## 2. Rescuezilla for Full Backup
 Let's take a full backup off the Proxmox server as it is now. 
 
+### 2.1 Prepare an USB-stick with Rescuezilla on
 Prepare a USB-stick with Rescuezilla on:
 1. Download the Rescuezilla installer at their [website](https://rescuezilla.com/download)
 2. Get yourself a seperate USB-stick for installing it to (Be aware! The USB-stick will be completely erased)
@@ -99,10 +103,13 @@ Prepare a USB-stick with Rescuezilla on:
     - Cluster size: 64 KB (default)
 5. When done, you can use the USB-stick to backup a full bare-metall
 
+### 2.2 Take the backup with Rescuezilla
 Now take a backup off the Proxmox server:
 1. Shutdown the server
-2. Insert the Rescuezilla USB-stick
-3. Startup the server and go into the boot-menu (F7 for my Slimbook One)
-4. 
+2. Remove the external SSD
+3. Insert the Rescuezilla USB-stick
+4. Startup the server and go into the boot-menu (F7 for my Slimbook One)
+5. Choose the USB-stick with Rescuezilla on
+6. 
 
 
