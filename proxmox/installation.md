@@ -29,7 +29,8 @@ Update the Proxmox server:
 2. When done click `>... Upgrade` and a console will open to update the full Proxmox node. Sometimes you will need to reboot. Close the console and reboot from the Proxmox-UI.
 
 ### 2. Storage
-I have an external 4TB SSD which I will use for bare-metal backups and a Synology NAS for the VM backups.
+I have an external 4TB SSD which I will use for bare-metal backups.
+> I also have a Synology DS420+ NAS but I'll need to buy first an extra HD because there is not enough room left
 
 #### Setup External SSD
 After connecting to the Slimbook, see which one it is and format it to EXT4 format. So open the shell from Proxmox:
@@ -59,6 +60,7 @@ mount -a                 # Mount all filesystems listed in /etc/fstab (may show 
 systemctl daemon-reload  # Reload systemd configuration as suggested
 df -h | grep ssd-backup  # Verify that the disk is mounted and available
 ```
+
 
 
 
