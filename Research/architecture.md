@@ -102,6 +102,17 @@ I've looked for a European alternative for free certificate management but as fo
 
 ---
 
+## Backup Tools
+To create a full backup from the Proxmox nodes, should everything fail.
+- [Rescuezilla](https://rescuezilla.com/) : An open-source easy-to-use disk imaging app that's fully compatible with Clonezilla
+- [TimeShift](https://github.com/linuxmint/timeshift) : Timeshift for Linux is an application that provides functionality similar to the System Restore feature in Windows
+- [Clonezilla](https://clonezilla.org/) : Partition and disk imaging/cloning program similar to True Image® or Norton Ghost®.
+- [FSArchiver](https://www.fsarchiver.org/) : System tool that allows you to save the contents of a file-system to a compressed archive file.
+
+I still need to study these further, but TimeShift and Rescuezilla look very promising.
+
+---
+
 ## Software to check
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
 - [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
