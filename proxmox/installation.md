@@ -28,5 +28,40 @@ Update the Proxmox server:
 1. Go back to Updates and then above you can click `refresh`. Proxmox will check the repositories for updates.
 2. When done click `>... Upgrade` and a console will open to update the full Proxmox node. Sometimes you will need to reboot. Close the console and reboot from the Proxmox-UI.
 
+### 2. Storage
+I have an external 4TB SSD which I will use for bare-metal backups and a Synology NAS for the VM backups.
+
+#### Setup External SSD
+After connecting to the Slimbook, see which one it is and format it to EXT4 format. So open the shell from Proxmox:
+```bash
+lsblk                 # Gives an overview off the drives
+dmesg | tail -n 20    # Can be used to show the new connected drive and where
+```
+- Slimbooks SSD is called "nvmeOn1" which was setup by the Proxmox installer
+- External SSS is called sda on my system.
+
+Now we need to format this disk and mount it.
+```bash
+fdisk /dev/sda           # Start fdisk interactive menu
+-> Command: g            # Delete old and create new partition table
+-> Command: n            # Create a new partition
+-> Partition number: 1   # Default setting
+-> First sector:         # Leave empty en press enter for default sector
+-> Last sector:          # Leave empty en press enter for default sector
+-> Command: w            # Write to disk and close fdisk interactive menu
+
+lsblk                    # You should now see the new drive with 1 partition, in my case "sda1"
+mkfs.ext4 /dev/sda1      # Format the partition to EXT4 fileformat
+mkdir /mnt/ssd-backup    # Directory to mount drive sda1 to. We use "/mnt" because it's an external drive.
+
+echo "/dev/sda1 /mnt/ssd-backup ext4 defaults 0 2" >> /etc/fstab    # Add line to /etc/fstab to automatically mount drive
+mount -a                 # Mount all from the file /ect/fstab -> this will give a warning (hint)
+systemctl daemon-reload  # Reload like the warning said to do
+df -h | grep ssd-backup  # To check if disk is correctly mounted and ready to use
+```
+
+
+
+
 
 
