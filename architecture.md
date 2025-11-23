@@ -12,7 +12,7 @@ My physical devices (modem, gateway, hypervisor, NAS, etc.).
 | Asus ZenWifi BQ16        | Gateway, DHCP, WiFi     | 192.168.50.1    | Firewall, AIProtection          |
 | Slimbook One Mini-PC     | Proxmox Hypervisor      | 192.168.50.157  | pve01.homelab.local (16 Threads, 32GB RAM, 1TB SSD) |
 | Synology NAS             | Storage                 | 192.168.50.149  | Daily snapshots                 |
-| Kingston XS2000 4TB SSD  | Storage (External SSD)  | n/a             | Weekly full backups             |
+| Kingston XS2000 SSD 4TB  | Storage (External SSD)  | n/a             | Weekly full backups             |
 
 ---
 
