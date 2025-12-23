@@ -21,7 +21,7 @@ blkid                 # Lookup UUIDs of partitions
 - Internal Slimbook SSD → nvme0n1 (set up by Proxmox installer)
 - External SSD → sda (with partition sda1)
 
-Partition and format
+Partition and format:
 ```bash
 fdisk /dev/sda           # Start fdisk interactive menu
 -> Command: g            # Create a new GPT partition table (wipes old one)
