@@ -35,7 +35,7 @@ lsblk                    # Verify new partition exists, e.g. "sda1"
 mkfs.ext4 /dev/sda1      # Format the partition with EXT4 filesystem
 mkdir /mnt/ssd-backup    # Create mount directory. Convention: use "/mnt" for external/extra storage
 ```
-#### Configure fstab
+### 1.2 Configure fstab
 Lookup the UUID of the external SSD:
 ```bash
 blkid /dev/sda1
@@ -65,7 +65,7 @@ lsblk
 df -h
 ```
 
-### 1.2 Add the SSD to Proxmox Datacenter Storage
+### 1.3 Add the SSD to Proxmox Datacenter Storage
 I will use the external SSD for full bare-metal backups using Rescuezilla. Probably keep 2x full-backups.
 The other space left (~2TB) will for now be used to backup full VM's with **vzdump** in Proxmox
 
