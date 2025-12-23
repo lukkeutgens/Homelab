@@ -35,7 +35,7 @@ lsblk                    # Verify new partition exists, e.g. "sda1"
 mkfs.ext4 /dev/sda1      # Format the partition with EXT4 filesystem
 mkdir /mnt/ssd-backup    # Create mount directory. Convention: use "/mnt" for external/extra storage
 ```
-Configure fstab
+#### Configure fstab
 Lookup the UUID of the external SSD:
 ```bash
 blkid /dev/sda1
