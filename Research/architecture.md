@@ -84,6 +84,7 @@ Pricing are not really clear presented. At Easyhost it is shown €0,49 but then
 
 Dynamic DNS:
 - [Cloudflare](https://www.cloudflare.com/) : Free dynamic DNS
+- [NextDNS](https://nextdns.io) : Free dynamic DNS
 - [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
 - [No-IP](https://www.noip.com/) : Free dynamic DNS
 - [Dynu](https://www.dynu.com/) : Free dynamic DNS
