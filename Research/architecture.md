@@ -2,15 +2,15 @@
 
 ## Software Stack
 
-| Device        | Software                | Description                                          | Link                                                                                  |
-| :---          | :---                    | :---                                                 | :---                                                                                  |
-| Slimbook One  | Proxmox                 | Hypervisor for running VM's                          | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)   |
-| Container     | Technitium DNS          | DNS-server as container in Proxmox                   | [Website](https://technitium.com/dns/)         |
-| VM          | Caddy Reverse Proxy    | Reverse proxy to isolate homelab services & VM's     | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
-| VM          | Step CA                 | Internal Certificate Manager for services & devices  | [Website](https://smallstep.com/docs/step-ca/)   |
-| VM          | Authentik               | Authentication & Identity Management (AIM)           | [Website](https://goauthentik.io)                |
-| ???           | Cockpit                 | Web based server management                          | [Website](https://cockpit-project.org/), [Github](https://github.com/cockpit-project/cockpit)  |
-| ???           | Portainer CE            | Manage Containers (Docker, Kubernetes, ...)          | [Github](https://github.com/portainer/portainer) |
+| Device       | Software            | Description                                                                    | Link                                                                                                          |
+| :----------- | :------------------ | :----------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| Slimbook One | Proxmox             | Hypervisor for running VM's                                                    | [Website](https://www.proxmox.com/en/products/proxmox-virtual-environment/overview)                           |
+| Container    | Technitium DNS      | DNS-server as container in Proxmox                                             | [Website](https://technitium.com/dns/)                                                                        |
+| VM           | Caddy Reverse Proxy | Reverse proxy to isolate homelab services & VM's, and can handle Let's Encrypt | [Website](https://nginxproxymanager.com/), [Github](https://github.com/NginxProxyManager/nginx-proxy-manager) |
+| VM           | Step CA             | Internal Certificate Manager for services & devices                            | [Website](https://smallstep.com/docs/step-ca/)                                                                |
+| VM           | Authentik           | Authentication & Identity Management (AIM)                                     | [Website](https://goauthentik.io)                                                                             |
+| ???          | Cockpit             | Web based server management                                                    | [Website](https://cockpit-project.org/), [Github](https://github.com/cockpit-project/cockpit)                 |
+| ???          | Portainer CE        | Manage Containers (Docker, Kubernetes, ...)                                    | [Github](https://github.com/portainer/portainer)                                                              |
 
 ---
 
@@ -99,7 +99,7 @@ Dynamic DNS:
 
 Online services for certificates:
 I've looked for a European alternative for free certificate management but as for now, there are none!
-[Let's Encrypt](https://letsencrypt.org/) : Free best known service, thrusted world-wide
+[Let's Encrypt](https://letsencrypt.org/) : Free best known service, thrusted world-wide and can be handled by [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy) 
 
 ---
 
