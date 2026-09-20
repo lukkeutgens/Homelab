@@ -1,6 +1,7 @@
-# Architecture
+Research which services to use and how they are linked up with each other
 
 ## Software Stack
+Overview off the services choosen.
 
 | Device       | Software            | Description                                                                    | Link                                                                                                          |
 | :----------- | :------------------ | :----------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
@@ -15,14 +16,12 @@
 ---
 ## DNS-Server
 Some information on how to setup the DNS-server. I still need to research wich service I will use.
-
-### Notes
+#### Notes
 - DNS-server to run on the local LAN network for internal and internet use. For example, Proxmox need's this to be able to connect to the Step CA service which will be behind a reverse proxy.
 - This service can run as a container in Proxmox because it is not exposed to the internet like the services we will run behind a reverse proxy.
 - The DNS-server must be in my local LAN and NOT behind the reverse proxy
 - My Asus Zenwifi will distribute the DNS-server to the LAN-clients
-
-### Possible software
+#### Possible software
 All open-source (free) and ACME compatible (renewing certificates)
 - [AdGuard Home Github](https://github.com/AdguardTeam/AdGuardHome) : More modern UI, more options but heavier
 - [Pi‑hole / Unbound](https://docs.pi-hole.net/) : Lightweight with Web-UI. Primarly focus on adblocking
@@ -30,8 +29,7 @@ All open-source (free) and ACME compatible (renewing certificates)
 - [Technitium](https://technitium.com/dns/) : Full DNS-server with modern UI, support for DNSSEC, DoH/DoT and caching. More control then Pi-hole but also lightweight.
 
 For now the selection is Technitium.
-
-### Flow example
+#### Flow example
 An example how Proxmox will renew it's internal certificate through ACME
 ```text
 [Proxmox Host] 192.168.50.150
@@ -54,17 +52,15 @@ An example how Proxmox will renew it's internal certificate through ACME
 ```
 
 ---
-
 ## Reverse Proxy
 I will setup a reverse proxy as an extra security step in my homelab. All VM's will run behind this proxy.
-
-### Notes
+#### Notes
 - Must run as VM for better isolation.
 - Must have health checks to see if nodes are online
 - Must be compatible with Step CA (ACME-endpoint), self-signed and from the net
 - Direct installable in Debian is a big plus. So no need for container software.
 
-### Software to consider:
+#### Software to consider:
 - [NGINX Proxy Manager](https://nginxproxymanager.com/) : Well known, but no health checks of nodes
 - [HAProxy](https://www.haproxy.org/) : Robust load balancer with health checks
 - [Traefik](https://traefik.io/traefik) : Modern reverse proxy with service discovery and health checks
@@ -73,24 +69,46 @@ I will setup a reverse proxy as an extra security step in my homelab. All VM's w
 For now added Caddy as reverse Proxy.
 
 ---
-
-## Domain Names & Dynamic DNS providers
-Domain names:
+## Domain Names
 Pricing are not really clear presented. At Easyhost it is shown €0,49 but then jumps to €2,99 a year? So I need to study these websites further.
+
 - [Let's Encrypt](https://letsencrypt.org/) : For public domain names, to link up with the Proxy on the WAN side?
 - [Combell](https://www.combell.com/nl/domeinnamen) : €2,99 a year
 - [EasyHost](https://www.easyhost.be/nl/domeinnaam-kopen) : €2,99 a year
 
-Dynamic DNS:
-- [Cloudflare](https://www.cloudflare.com/) : Free dynamic DNS
-- [NextDNS](https://nextdns.io) : Free dynamic DNS (Can also block trackers and other)
-- [Duck DNS](https://www.duckdns.org/) : Free dynamic DNS hosted on AWS?
-- [No-IP](https://www.noip.com/) : Free dynamic DNS
-- [Dynu](https://www.dynu.com/) : Free dynamic DNS
-- [Vimexx](https://www.vimexx.be/) : Not free, but cheap dynamic DNS
+---
+## DNS Providers
+
+There are actually **two separate roles** here that happen to share the term "DNS provider" but have nothing to do with each other. Keeping them apart avoids confusion.
+#### Role 1 — Recursive Resolver (Security / Filtering)
+This is the service that **Technitium** forwards to for every DNS query leaving the home network. This layer blocks malicious, phishing, and tracking domains before any device can ever connect to them. This protects **outbound** traffic.
+
+| Option | Origin | Notes |
+| :--- | :--- | :--- |
+| [Cloudflare (1.1.1.1)](https://www.cloudflare.com/) | US | Fast, free, no strong focus on malware blocking |
+| [NextDNS](https://nextdns.io) | US/FR | Free tier, configurable blocklists, malware/tracker blocking |
+| [dns0.eu](https://www.dns0.eu/) | EU (France, non-profit) | European, GDPR-compliant, built-in malware/phishing blocking (via the `zero.dns0.eu` variant), founded by former NextDNS co-founders |
+**Used by**: Technitium (as upstream forwarder)
+**Why**: Technitium remains the local DNS server on the main LAN; this external resolver is simply the "backing" source Technitium forwards to for domains it can't resolve locally.
+**Status**: still to choose between Cloudflare, NextDNS, and dns0.eu — dns0.eu is currently the strongest European candidate.
+
+#### Role 2 — Authoritative DNS Hosting (ACME / Certificate Validation)
+This is the service that hosts the **DNS zone of the own domain** (the A/CNAME/TXT records for e.g. `owndomain.be`), with an **API** that lets Caddy automatically add a temporary TXT record to prove ownership of the domain — this is called **DNS-01 validation**. This lets Let's Encrypt issue/renew a certificate **without ever needing to open port 80/443 to the public internet**.
+
+**How it actually works**: Caddy never accepts an inbound connection from Let's Encrypt or the DNS provider. Instead, Caddy itself initiates two **outbound** connections: one to the DNS provider's API (to add the proof-of-ownership TXT record), and one to Let's Encrypt (to request the certificate). Let's Encrypt then checks the TXT record on its own, via the public DNS system — it never needs to reach back into the home network. The finished certificate is delivered to Caddy as the response to its own outbound request. Nothing needs to be reachable from the outside at any point.
+
+| Option | Origin | Notes |
+| :--- | :--- | :--- |
+| [Cloudflare](https://www.cloudflare.com/) | US | Free, most widely used option, broad plugin support |
+| [deSEC.io](https://desec.io/) | EU (Germany, non-profit) | Free, open source, full REST API, dedicated Caddy module (`caddy-dns/desec`) |
+| [Hetzner DNS](https://www.hetzner.com/dns-console/) | EU (Germany) | Free DNS API, Caddy support via community plugin |
+**Used by**: Caddy (reverse proxy, ACME DNS-01 challenge)
+**Why**: Caddy has Let's Encrypt built in, but the default validation method (HTTP-01) requires an open port 80. Using DNS-01 through a provider with an API instead keeps everything behind the firewall.
+**Status**: leaning toward **deSEC.io** — European, non-profit, free, and has a ready-made Caddy plugin (no custom build needed beyond plugging in the module).
+#### Important to remember
+These two roles are chosen fully independently of each other — e.g. combining dns0.eu for Role 1 with deSEC.io for Role 2 is entirely possible, and is currently also the most likely choice.
 
 ---
-
 ## Certificate Management
 - Step CA for the internal-only services like Cockpit for server management.
 - Step CA uses also ACME for automatic renewal off certificates wite Step CLI agent. Step CA is a ACME server.
@@ -101,7 +119,6 @@ I've looked for a European alternative for free certificate management but as fo
 [Let's Encrypt](https://letsencrypt.org/) : Free best known service, thrusted world-wide and can be handled by [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy) 
 
 ---
-
 ## Backup Tools
 To create a full backup from the Proxmox nodes, should everything fail.
 - [Rescuezilla](https://rescuezilla.com/) : An open-source easy-to-use disk imaging app that's fully compatible with Clonezilla
@@ -118,7 +135,6 @@ Notes:
 The chosen solution will be Rescuezilla on a USB stick, with the optional possibility of storing backups on a NAS.
 
 ---
-
 ## Software to check
 - [Keycloak](https://www.keycloak.org/) or [Authentik](https://goauthentik.io/) : Authentication & Identity Management (AIM) service
 - [Vaultwarden/Server](https://github.com/dani-garcia/vaultwarden) : Password manager server software
@@ -126,14 +142,12 @@ The chosen solution will be Rescuezilla on a USB stick, with the optional possib
 - [OpenObserve](https://github.com/openobserve/openobserve) : For monitoring servers (Link with Authentik with [Dex](https://github.com/dexidp/dex) as SSO-bridge)
 
 ---
-
 ## Notes for Cockpit
 Can not simple be connected with Authentik. This needs to be done with NGINX Proxy manager
 
 https://cockpit-project.org/guide/latest/authentication
 
 ---
-
 ## Some Keywords to Remember
 - **SAML** : Security Assertion Markup Language - Open standard for Single Sign-On (SSO) and identity federation. Used to authenticate multiple users with multiple services through a central identity provider (Authentik).
 - **ACME** : Automatic Certificate Management Environment
