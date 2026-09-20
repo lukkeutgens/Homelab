@@ -12,6 +12,17 @@ Overview off the services choosen.
 | VM           | Authentik           | Authentication & Identity Management (AIM)                                     | [Website](https://goauthentik.io)                                                                             |
 | ???          | Cockpit             | Web based server management                                                    | [Website](https://cockpit-project.org/), [Github](https://github.com/cockpit-project/cockpit)                 |
 | ???          | Portainer CE        | Manage Containers (Docker, Kubernetes, ...)                                    | [Github](https://github.com/portainer/portainer)                                                              |
+|              |                     |                                                                                |                                                                                                               |
+
+---
+## External Public Services
+Services we are going to use in the cloud for a secure setup off the homelab
+
+| Service                                                                                                                 | Name                                      | Used By        | Description                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| [[Research/Architecture#Role 1 — Recursive Resolver (Security / Filtering)\|Recursive DNS Resolver]]                    | [dns0.eu](https://www.dns0.eu)            | Technitium DNS | Blocks malicious, phishing, and tracking domains before any device can ever connect to them. This protects **outbound** traffic.     |
+| [[Research/Architecture#Role 2 — Authoritative DNS Hosting (ACME / Certificate Validation)\|Authoritative DNS Hosting]] | [deSEC.io](https://desec.io)              | Caddy          | Hosts the DNS zone of the own domain, with an API Caddy uses to prove domain ownership (DNS-01 validation) without opening any ports |
+| [[Research/Architecture#Certificate Management\|Trusted Certificates]]                                                  | [Let's Encrypt](https://letsencrypt.org/) | Caddy          | Provides trusted online certificates                                                                                                 |
 
 ---
 ## DNS-Server
@@ -28,7 +39,7 @@ All open-source (free) and ACME compatible (renewing certificates)
 - [CoreDNS](https://coredns.io/) : 
 - [Technitium](https://technitium.com/dns/) : Full DNS-server with modern UI, support for DNSSEC, DoH/DoT and caching. More control then Pi-hole but also lightweight.
 
-For now the selection is Technitium.
+For now the selection is **Technitium**.
 #### Flow example
 An example how Proxmox will renew it's internal certificate through ACME
 ```text
@@ -66,7 +77,7 @@ I will setup a reverse proxy as an extra security step in my homelab. All VM's w
 - [Traefik](https://traefik.io/traefik) : Modern reverse proxy with service discovery and health checks
 - [Caddy](https://caddyserver.com/docs/quick-starts/reverse-proxy) : Modern webserver/reverse proxy with Let's encrypt built in
 
-For now added Caddy as reverse Proxy.
+For now added **Caddy** as reverse Proxy.
 
 ---
 ## Domain Names
@@ -76,6 +87,8 @@ Pricing are not really clear presented. At Easyhost it is shown €0,49 but then
 - [Combell](https://www.combell.com/nl/domeinnamen) : €2,99 a year
 - [EasyHost](https://www.easyhost.be/nl/domeinnaam-kopen) : €2,99 a year
 
+For now we added **Let's Encrypt** as certificate provider
+
 ---
 ## DNS Providers
 
@@ -83,11 +96,11 @@ There are actually **two separate roles** here that happen to share the term "DN
 #### Role 1 — Recursive Resolver (Security / Filtering)
 This is the service that **Technitium** forwards to for every DNS query leaving the home network. This layer blocks malicious, phishing, and tracking domains before any device can ever connect to them. This protects **outbound** traffic.
 
-| Option | Origin | Notes |
-| :--- | :--- | :--- |
-| [Cloudflare (1.1.1.1)](https://www.cloudflare.com/) | US | Fast, free, no strong focus on malware blocking |
-| [NextDNS](https://nextdns.io) | US/FR | Free tier, configurable blocklists, malware/tracker blocking |
-| [dns0.eu](https://www.dns0.eu/) | EU (France, non-profit) | European, GDPR-compliant, built-in malware/phishing blocking (via the `zero.dns0.eu` variant), founded by former NextDNS co-founders |
+| Option                                              | Origin                  | Notes                                                                                                                                |
+| :-------------------------------------------------- | :---------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| [Cloudflare (1.1.1.1)](https://www.cloudflare.com/) | US                      | Fast, free, no strong focus on malware blocking                                                                                      |
+| [NextDNS](https://nextdns.io)                       | US/FR                   | Free tier, configurable blocklists, malware/tracker blocking                                                                         |
+| [dns0.eu](https://www.dns0.eu/)                     | EU (France, non-profit) | European, GDPR-compliant, built-in malware/phishing blocking (via the `zero.dns0.eu` variant), founded by former NextDNS co-founders |
 **Used by**: Technitium (as upstream forwarder)
 **Why**: Technitium remains the local DNS server on the main LAN; this external resolver is simply the "backing" source Technitium forwards to for domains it can't resolve locally.
 **Status**: still to choose between Cloudflare, NextDNS, and dns0.eu — dns0.eu is currently the strongest European candidate.
@@ -97,11 +110,11 @@ This is the service that hosts the **DNS zone of the own domain** (the A/CNAME/T
 
 **How it actually works**: Caddy never accepts an inbound connection from Let's Encrypt or the DNS provider. Instead, Caddy itself initiates two **outbound** connections: one to the DNS provider's API (to add the proof-of-ownership TXT record), and one to Let's Encrypt (to request the certificate). Let's Encrypt then checks the TXT record on its own, via the public DNS system — it never needs to reach back into the home network. The finished certificate is delivered to Caddy as the response to its own outbound request. Nothing needs to be reachable from the outside at any point.
 
-| Option | Origin | Notes |
-| :--- | :--- | :--- |
-| [Cloudflare](https://www.cloudflare.com/) | US | Free, most widely used option, broad plugin support |
-| [deSEC.io](https://desec.io/) | EU (Germany, non-profit) | Free, open source, full REST API, dedicated Caddy module (`caddy-dns/desec`) |
-| [Hetzner DNS](https://www.hetzner.com/dns-console/) | EU (Germany) | Free DNS API, Caddy support via community plugin |
+| Option                                              | Origin                   | Notes                                                                        |
+| :-------------------------------------------------- | :----------------------- | :--------------------------------------------------------------------------- |
+| [Cloudflare](https://www.cloudflare.com/)           | US                       | Free, most widely used option, broad plugin support                          |
+| [deSEC.io](https://desec.io/)                       | EU (Germany, non-profit) | Free, open source, full REST API, dedicated Caddy module (`caddy-dns/desec`) |
+| [Hetzner DNS](https://www.hetzner.com/dns-console/) | EU (Germany)             | Free DNS API, Caddy support via community plugin                             |
 **Used by**: Caddy (reverse proxy, ACME DNS-01 challenge)
 **Why**: Caddy has Let's Encrypt built in, but the default validation method (HTTP-01) requires an open port 80. Using DNS-01 through a provider with an API instead keeps everything behind the firewall.
 **Status**: leaning toward **deSEC.io** — European, non-profit, free, and has a ready-made Caddy plugin (no custom build needed beyond plugging in the module).
