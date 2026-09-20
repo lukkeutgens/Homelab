@@ -13,7 +13,6 @@
 | ???          | Portainer CE        | Manage Containers (Docker, Kubernetes, ...)                                    | [Github](https://github.com/portainer/portainer)                                                              |
 
 ---
-
 ## DNS-Server
 Some information on how to setup the DNS-server. I still need to research wich service I will use.
 
