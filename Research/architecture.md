@@ -18,11 +18,11 @@ Overview off the services choosen.
 ## External Public Services
 Services we are going to use in the cloud for a secure setup off the homelab
 
-| Service                                                                                                                 | Name                                      | Used By        | Description                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| [[Research/Architecture#Role 1 — Recursive Resolver (Security / Filtering)\|Recursive DNS Resolver]]                    | [dns0.eu](https://www.dns0.eu)            | Technitium DNS | Blocks malicious, phishing, and tracking domains before any device can ever connect to them. This protects **outbound** traffic.     |
-| [[Research/Architecture#Role 2 — Authoritative DNS Hosting (ACME / Certificate Validation)\|Authoritative DNS Hosting]] | [deSEC.io](https://desec.io)              | Caddy          | Hosts the DNS zone of the own domain, with an API Caddy uses to prove domain ownership (DNS-01 validation) without opening any ports |
-| [[Research/Architecture#Certificate Management\|Trusted Certificates]]                                                  | [Let's Encrypt](https://letsencrypt.org/) | Caddy          | Provides trusted online certificates                                                                                                 |
+| Service                   | Name                                      | Used By        | Description                                                                                                                          |
+| ------------------------- | ----------------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| Recursive DNS Resolver    | [dns0.eu](https://www.dns0.eu)            | Technitium DNS | Blocks malicious, phishing, and tracking domains before any device can ever connect to them. This protects **outbound** traffic.     |
+| Authoritative DNS Hosting | [deSEC.io](https://desec.io)              | Caddy          | Hosts the DNS zone of the own domain, with an API Caddy uses to prove domain ownership (DNS-01 validation) without opening any ports |
+| Trusted Certificates      | [Let's Encrypt](https://letsencrypt.org/) | Caddy          | Provides trusted online certificates                                                                                                 |
 
 ---
 ## DNS-Server
